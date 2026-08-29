@@ -85,12 +85,9 @@ export default function DoctorPage() {
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
                   Areas of Practice
                 </h3>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {["Aesthetic Medicine", "General Practice", "Botox", "Dermal Fillers", "PRP", "Skin Rejuvenation", "Chronic Disease Management"].map((a) => (
-                    <span key={a} className="rounded-full border border-warm-300 px-3 py-1 text-[11px] font-medium text-warm-600">
-                      {a}
-                    </span>
-                  ))}
+                <div className="mt-3 space-y-2">
+                  <p className="text-[14px] text-ink">General Practice</p>
+                  <p className="text-[14px] text-warm-600">Aesthetic Medicine (Botox, Dermal Fillers, Skin Treatments, Minor Surgery, and more)</p>
                 </div>
               </div>
             </div>
