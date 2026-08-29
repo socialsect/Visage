@@ -17,50 +17,35 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[85dvh] bg-surface">
-        <div className="mx-auto grid max-w-[1400px] items-center px-5 sm:px-8 lg:grid-cols-12 lg:gap-6 lg:py-0">
-          {/* Copy */}
-          <div className="relative z-10 py-16 sm:py-20 lg:col-span-5 lg:py-24">
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
-              Visage Polyclinic &middot; Dubai
+      <section className="bg-surface">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="flex min-h-[75dvh] flex-col items-center justify-center py-20 text-center lg:min-h-[80dvh]">
+            <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-400">
+              Visage Polyclinic &middot; Business Bay, Dubai
             </p>
-            <h1 className="text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.08] tracking-tight text-ink">
-              Personalised<br />
-              <span className="font-display font-normal italic text-brand-500">care,</span><br />
-              thoughtfully delivered.
+            <h1 className="max-w-4xl text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.05] tracking-tight text-ink">
+              Modern medicine.
+              <br />
+              <span className="font-display font-normal italic text-brand-500">Thoughtfully</span>
+              <br />
+              delivered.
             </h1>
-            <p className="mt-6 max-w-md text-[15px] leading-relaxed text-warm-600">
-              Medical and aesthetic treatments under one roof. Every patient receives individual attention in a professional, welcoming environment.
+            <p className="mt-8 max-w-lg text-[15px] leading-[1.8] text-warm-500">
+              Medical and aesthetic treatments under one roof. Personalised care for every individual.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
+                className="inline-flex items-center rounded-full bg-ink px-8 py-3.5 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
               >
                 Book an Appointment
               </Link>
               <Link
                 href="/treatments"
-                className="inline-flex items-center text-[13px] font-medium text-warm-600 transition-colors hover:text-ink"
+                className="inline-flex items-center rounded-full border border-warm-300 px-8 py-3.5 text-[13px] font-medium text-warm-600 transition-all duration-200 hover:border-brand-300 hover:text-ink"
               >
                 Explore Treatments
-                <svg className="ml-1.5 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                </svg>
               </Link>
-            </div>
-          </div>
-          {/* Image */}
-          <div className="relative lg:col-span-7">
-            <div className="relative aspect-[4/5] overflow-hidden bg-warm-200 sm:aspect-[3/4] lg:aspect-[4/5]">
-              <Image
-                src="/hero-image.jpg"
-                alt="Visage Polyclinic clinic interior"
-                fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-                priority
-              />
             </div>
           </div>
         </div>
@@ -170,13 +155,13 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="order-2 lg:order-1 lg:col-span-7">
-              <div className="relative aspect-[16/10] overflow-hidden bg-warm-200">
+              <div className="relative aspect-[4/3] overflow-hidden bg-warm-200 sm:aspect-[16/10]">
                 <Image
                   src="/dr-musa.jpg"
                   alt="Dr. Musa - Dermal filler treatments at Visage Polyclinic"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
             </div>
