@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — muted lilac/mauve extracted from logo direction */
+  --color-brand-50: #f7f5f6;
+  --color-brand-100: #f0eaed;
+  --color-brand-200: #e2d8de;
+  --color-brand-300: #c9b8c3;
+  --color-brand-400: #a993a6;
+  --color-brand-500: #917a8d;
+  --color-brand-600: #7a6178;
+  --color-brand-700: #644e62;
+  --color-brand-800: #534151;
+  --color-brand-900: #3d2f3c;
+
+  /* Warm neutrals */
+  --color-warm-50: #fdfcfb;
+  --color-warm-100: #f9f7f5;
+  --color-warm-200: #f0eeeb;
+  --color-warm-300: #e2dfdb;
+  --color-warm-400: #c8c3be;
+  --color-warm-500: #a9a29c;
+  --color-warm-600: #8a827b;
+  --color-warm-700: #6b645e;
+  --color-warm-800: #4a4541;
+  --color-warm-900: #2c2926;
+
+  /* Deep charcoal */
+  --color-ink: #2c2926;
+  --color-ink-light: #5a5551;
+  --color-ink-muted: #8a827b;
+
+  /* Warm white */
+  --color-surface: #fdfcfb;
+  --color-surface-alt: #f9f7f5;
+  --color-surface-wash: #f0eeeb;
+
+  /* Muted lilac accent */
+  --color-accent: #917a8d;
+  --color-accent-deep: #7a6178;
+  --color-accent-light: #c9b8c3;
+
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-brand-900);
+  }
+
+  /* Smooth image loading */
+  img {
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* Thin horizontal rule used across sections */
+.visage-divider {
+  height: 1px;
+  background: var(--color-warm-300);
+}
