@@ -34,10 +34,10 @@ export default function HomePage() {
             <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-400">
               Visage Polyclinic &middot; Business Bay, Dubai
             </p>
-            <h1 className="max-w-4xl text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.05] tracking-tight text-ink">
+            <h1 className="max-w-4xl text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Modern medicine.
               <br />
-              <span className="font-display font-normal italic text-brand-500">Thoughtfully</span>
+              <span className="font-display font-normal italic text-brand-500 pb-1 inline-block">Thoughtfully</span>
               <br />
               delivered.
             </h1>
