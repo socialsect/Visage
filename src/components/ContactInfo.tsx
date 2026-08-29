@@ -53,7 +53,7 @@ export function ContactInfo() {
 
   return (
     <div className="border border-warm-300 p-6">
-      <h3 className="font-serif text-lg font-semibold text-ink">Contact Information</h3>
+      <h3 className="text-lg font-semibold text-ink">Contact Information</h3>
       <div className="mt-5 space-y-4">
         {details.map((d) => (
           <div key={d.label} className="flex items-start gap-3">

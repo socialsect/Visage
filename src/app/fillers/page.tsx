@@ -43,8 +43,8 @@ export default function FillersPage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Aesthetic Medicine
               </p>
-              <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-                Dermal Fillers
+              <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+                Dermal <span className="font-display font-normal italic text-brand-500">Fillers</span>
               </h1>
               <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
                 Address static wrinkles, restore lost volume, and contour facial features with precision injectable treatments.
@@ -92,7 +92,7 @@ export default function FillersPage() {
             { label: "Up to 5 Years", sub: "Sculptra results may last" },
           ].map((f) => (
             <div key={f.label} className="bg-surface p-6 text-center">
-              <p className="font-serif text-xl font-semibold text-ink">{f.label}</p>
+              <p className="text-xl font-semibold text-ink">{f.label}</p>
               <p className="mt-1 text-[12px] text-warm-500">{f.sub}</p>
             </div>
           ))}
@@ -113,7 +113,7 @@ export default function FillersPage() {
                 </p>
               </div>
               
-              <h2 className="font-serif text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+              <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
                 We make facial contouring Safe, Natural, and Harmonious
               </h2>
               
@@ -159,7 +159,7 @@ export default function FillersPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Treatment Areas
             </h2>
           </div>
@@ -178,7 +178,7 @@ export default function FillersPage() {
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Boosters &amp; Biostimulators
             </h2>
             <p className="mt-3 text-[14px] text-warm-600">
@@ -188,7 +188,7 @@ export default function FillersPage() {
           <div className="grid gap-px bg-warm-300 sm:grid-cols-2">
             {boosters.map((b) => (
               <div key={b.title} className="bg-surface p-7">
-                <h3 className="font-serif text-base font-semibold text-ink">{b.title}</h3>
+                <h3 className="text-base font-semibold text-ink">{b.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{b.desc}</p>
               </div>
             ))}
@@ -200,7 +200,7 @@ export default function FillersPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               What to Expect
             </h2>
           </div>
@@ -211,8 +211,8 @@ export default function FillersPage() {
               { num: "3", title: "Results", body: "Immediate results with fillers. Some initial swelling settles within days." },
             ].map((s) => (
               <div key={s.num} className="border-t border-warm-300 pt-6">
-                <span className="font-serif text-2xl font-semibold text-brand-400">{s.num}</span>
-                <h3 className="mt-3 font-serif text-lg font-semibold text-ink">{s.title}</h3>
+                <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
+                <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
               </div>
             ))}
@@ -230,7 +230,7 @@ export default function FillersPage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             Interested in dermal fillers?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">

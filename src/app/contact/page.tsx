@@ -19,8 +19,8 @@ export default function ContactPage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               Get in Touch
             </p>
-            <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-              Contact &amp; Book an Appointment
+            <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+              Contact &amp; <span className="font-display font-normal italic text-brand-500">Book</span>
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
               Reach out by phone, WhatsApp, or use the form below to request an appointment.
@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Request an Appointment
               </h2>
               <p className="mt-2 text-[14px] text-warm-600">

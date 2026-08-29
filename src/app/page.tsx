@@ -24,9 +24,10 @@ export default function HomePage() {
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               Visage Polyclinic &middot; Dubai
             </p>
-            <h1 className="font-serif text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.08] tracking-tight text-ink">
-              Personalised care,<br />
-              <span className="italic text-brand-500">thoughtfully</span> delivered.
+            <h1 className="text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.08] tracking-tight text-ink">
+              Personalised<br />
+              <span className="font-display font-normal italic text-brand-500">care,</span><br />
+              thoughtfully delivered.
             </h1>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-warm-600">
               Medical and aesthetic treatments under one roof. Every patient receives individual attention in a professional, welcoming environment.
@@ -69,8 +70,8 @@ export default function HomePage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-              A clinic built around the patient
+            <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+              A clinic built around<br />the <span className="font-display font-normal italic text-brand-500">patient</span>
             </h2>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
               Established in September 2024, Visage Polyclinic brings together aesthetic medicine and general medical services in the heart of Business Bay. Our approach is simple: professional care, personalised to each individual, delivered with clarity and respect.
@@ -88,7 +89,7 @@ export default function HomePage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               Aesthetic Medicine
             </p>
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Treatments that reflect<br className="hidden sm:block" /> your individual needs
             </h2>
           </div>
@@ -100,7 +101,7 @@ export default function HomePage() {
                 href={t.href}
                 className="group bg-surface p-8 transition-colors duration-200 hover:bg-brand-50"
               >
-                <h3 className="font-serif text-xl font-semibold text-ink group-hover:text-brand-600 transition-colors">
+                <h3 className="text-xl font-semibold text-ink group-hover:text-brand-600 transition-colors">
                   {t.title}
                 </h3>
                 <p className="mt-3 text-[13px] leading-relaxed text-warm-600">
@@ -126,7 +127,7 @@ export default function HomePage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Botox
               </p>
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Addressing dynamic wrinkles with precision
               </h2>
               <p className="mt-5 text-[15px] leading-[1.75] text-warm-600">
@@ -183,7 +184,7 @@ export default function HomePage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Fillers
               </p>
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Restoring volume, refining contours
               </h2>
               <p className="mt-5 text-[15px] leading-[1.75] text-warm-600">
@@ -219,7 +220,7 @@ export default function HomePage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               Medical Services
             </p>
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Comprehensive care, one location
             </h2>
           </div>
@@ -233,7 +234,7 @@ export default function HomePage() {
               { title: "Emergency & Referral", desc: "Urgent care services and specialist referral coordination when needed." },
             ].map((s) => (
               <div key={s.title}>
-                <h3 className="font-serif text-lg font-semibold text-ink">{s.title}</h3>
+                <h3 className="text-lg font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.desc}</p>
               </div>
             ))}
@@ -245,8 +246,8 @@ export default function HomePage() {
       <section className="bg-ink py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-14">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-white">
-              Why Visage
+            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-white">
+              Why <span className="font-display font-normal italic">Visage</span>
             </h2>
           </div>
           <div className="grid gap-px sm:grid-cols-2 lg:grid-cols-4">
@@ -257,7 +258,7 @@ export default function HomePage() {
               { title: "Under One Roof", body: "Aesthetic and medical services in a single clinic for convenient, coordinated care." },
             ].map((item) => (
               <div key={item.title} className="bg-warm-900 p-8">
-                <h3 className="font-serif text-lg font-semibold text-white">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                 <p className="mt-3 text-[13px] leading-relaxed text-warm-400">{item.body}</p>
               </div>
             ))}
@@ -277,7 +278,7 @@ export default function HomePage() {
               </p>
               <span className="h-px w-8 bg-warm-300"></span>
             </div>
-            <h2 className="relative inline-block font-serif text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+            <h2 className="relative inline-block text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
               How It Works
             </h2>
           </div>
@@ -291,9 +292,9 @@ export default function HomePage() {
               {/* Step 1 */}
               <div className="relative flex flex-col items-center text-center">
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="font-serif text-lg text-ink">1</span>
+                  <span className="text-lg text-ink">1</span>
                 </div>
-                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Book Your Initial Session</h3>
+                <h3 className="mt-8 text-xl font-semibold text-ink">Book Your Initial Session</h3>
                 <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
                   Start with a detailed consultation — a conversation about your concerns, aesthetic goals, and medical history.
                 </p>
@@ -302,9 +303,9 @@ export default function HomePage() {
               {/* Step 2 */}
               <div className="relative flex flex-col items-center text-center">
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="font-serif text-lg text-ink">2</span>
+                  <span className="text-lg text-ink">2</span>
                 </div>
-                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Get Your Personalised Plan</h3>
+                <h3 className="mt-8 text-xl font-semibold text-ink">Get Your Personalised Plan</h3>
                 <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
                   Dr. Musa will recommend the right treatments or procedures tailored specifically for your unique situation.
                 </p>
@@ -313,9 +314,9 @@ export default function HomePage() {
               {/* Step 3 */}
               <div className="relative flex flex-col items-center text-center">
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="font-serif text-lg text-ink">3</span>
+                  <span className="text-lg text-ink">3</span>
                 </div>
-                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Begin Your Treatment</h3>
+                <h3 className="mt-8 text-xl font-semibold text-ink">Begin Your Treatment</h3>
                 <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
                   Experience professional care in our Business Bay clinic, with continuous support throughout your journey.
                 </p>
@@ -346,7 +347,7 @@ export default function HomePage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Our Doctor
               </p>
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Dr. Musa
               </h2>
               <p className="mt-1 text-[15px] font-medium text-brand-500">
@@ -379,7 +380,7 @@ export default function HomePage() {
       <section className="py-20 sm:py-28 overflow-hidden">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 relative">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Patient feedback
             </h2>
           </div>
@@ -393,7 +394,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Find us in<br />Business Bay
               </h2>
               <div className="mt-6 space-y-3 text-[14px] leading-relaxed text-warm-600">
@@ -428,8 +429,8 @@ export default function HomePage() {
       {/* ─── Final CTA ─── */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Begin your consultation
+          <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+            Begin your <span className="font-display font-normal italic text-brand-500">consultation</span>
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-warm-600">
             Contact us to schedule an appointment. We look forward to welcoming you.

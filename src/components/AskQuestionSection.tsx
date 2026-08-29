@@ -19,7 +19,7 @@ export function AskQuestionSection() {
               </p>
             </div>
             
-            <h2 className="font-serif text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+            <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
               Not sure where<br />to start? Just ask.
             </h2>
             
@@ -74,7 +74,7 @@ export function AskQuestionSection() {
             <div className="rounded-[1.25rem] border border-warm-200 bg-white p-8 shadow-sm sm:p-10">
               {submitted ? (
                 <div className="py-16 text-center">
-                  <h3 className="font-serif text-2xl font-semibold text-ink">Thank you</h3>
+                  <h3 className="text-2xl font-semibold text-ink">Thank you</h3>
                   <p className="mt-3 text-[14px] text-warm-600">
                     We have received your question and will get back to you within one working day.
                   </p>

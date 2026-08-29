@@ -43,8 +43,8 @@ export default function TreatmentsPage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               Our Services
             </p>
-            <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-              Treatments &amp; Services
+            <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+              <span className="font-display font-normal italic text-brand-500">Treatments</span> &amp; Services
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
               From aesthetic medicine to general practice, comprehensive care tailored to each patient.
@@ -57,14 +57,14 @@ export default function TreatmentsPage() {
       <section className="pb-20 sm:pb-28" id="aesthetic">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Aesthetic Medicine
             </h2>
           </div>
           <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-4">
             {aesthetic.map((t) => (
               <div key={t.title} className="bg-surface p-7">
-                <h3 className="font-serif text-base font-semibold text-ink">{t.title}</h3>
+                <h3 className="text-base font-semibold text-ink">{t.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{t.desc}</p>
                 {t.href && (
                   <Link
@@ -87,14 +87,14 @@ export default function TreatmentsPage() {
               href="/botox"
               className="group border border-warm-300 p-6 transition-colors hover:border-brand-300"
             >
-              <h3 className="font-serif text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Botox</h3>
+              <h3 className="text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Botox</h3>
               <p className="mt-2 text-[13px] text-warm-600">Wrinkle reduction and muscle relaxation. No downtime.</p>
             </Link>
             <Link
               href="/fillers"
               className="group border border-warm-300 p-6 transition-colors hover:border-brand-300"
             >
-              <h3 className="font-serif text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Dermal Fillers</h3>
+              <h3 className="text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Dermal Fillers</h3>
               <p className="mt-2 text-[13px] text-warm-600">Volume restoration, contouring, and skin rejuvenation.</p>
             </Link>
           </div>
@@ -107,14 +107,14 @@ export default function TreatmentsPage() {
       <section className="py-20 sm:py-28" id="medical">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Medical Services
             </h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {medical.map((s) => (
               <div key={s.title} className="border-t border-warm-300 pt-5">
-                <h3 className="font-serif text-base font-semibold text-ink">{s.title}</h3>
+                <h3 className="text-base font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.desc}</p>
               </div>
             ))}
@@ -126,7 +126,7 @@ export default function TreatmentsPage() {
       <section className="bg-surface-alt py-20 sm:py-28" id="minor-surgery">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Minor Surgery
             </h2>
             <p className="mt-3 text-[14px] text-warm-600">
@@ -136,7 +136,7 @@ export default function TreatmentsPage() {
           <div className="grid gap-px bg-warm-300 sm:grid-cols-3">
             {surgery.map((p) => (
               <div key={p.title} className="bg-surface p-7">
-                <h3 className="font-serif text-base font-semibold text-ink">{p.title}</h3>
+                <h3 className="text-base font-semibold text-ink">{p.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{p.desc}</p>
               </div>
             ))}
@@ -147,7 +147,7 @@ export default function TreatmentsPage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             Not sure which treatment is right for you?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">

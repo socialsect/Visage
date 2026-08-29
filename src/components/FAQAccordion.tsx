@@ -18,7 +18,7 @@ export function FAQAccordion({ items, title }: FAQAccordionProps) {
   return (
     <div>
       {title && (
-        <h2 className="mb-8 font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+        <h2 className="mb-8 text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
           {title}
         </h2>
       )}

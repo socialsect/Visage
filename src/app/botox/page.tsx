@@ -39,8 +39,8 @@ export default function BotoxPage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Aesthetic Medicine
               </p>
-              <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-                Botox Treatments
+              <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+                <span className="font-display font-normal italic text-brand-500">Botox</span> Treatments
               </h1>
               <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
                 A non-surgical treatment to reduce dynamic wrinkles by relaxing targeted muscles. It can also decrease muscle bulk in certain areas.
@@ -88,7 +88,7 @@ export default function BotoxPage() {
             { label: "Non-Surgical", sub: "Injectable with minimal discomfort" },
           ].map((f) => (
             <div key={f.label} className="bg-surface p-6 text-center">
-              <p className="font-serif text-xl font-semibold text-ink">{f.label}</p>
+              <p className="text-xl font-semibold text-ink">{f.label}</p>
               <p className="mt-1 text-[12px] text-warm-500">{f.sub}</p>
             </div>
           ))}
@@ -109,7 +109,7 @@ export default function BotoxPage() {
                 </p>
               </div>
               
-              <h2 className="font-serif text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+              <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
                 We make aesthetic care Safe, Natural, and Effective
               </h2>
               
@@ -155,7 +155,7 @@ export default function BotoxPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Treatment Areas
             </h2>
           </div>
@@ -174,7 +174,7 @@ export default function BotoxPage() {
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               What to Expect
             </h2>
           </div>
@@ -185,8 +185,8 @@ export default function BotoxPage() {
               { num: "3", title: "Aftercare", body: "Follow specific guidelines for four hours. Results develop over the following days." },
             ].map((s) => (
               <div key={s.num} className="border-t border-warm-300 pt-6">
-                <span className="font-serif text-2xl font-semibold text-brand-400">{s.num}</span>
-                <h3 className="mt-3 font-serif text-lg font-semibold text-ink">{s.title}</h3>
+                <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
+                <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
               </div>
             ))}
@@ -198,7 +198,7 @@ export default function BotoxPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Post-Treatment Guidelines
             </h2>
             <p className="mt-3 text-[14px] text-warm-600">
@@ -228,7 +228,7 @@ export default function BotoxPage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             Ready to try Botox?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">

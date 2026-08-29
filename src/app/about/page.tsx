@@ -18,8 +18,8 @@ export default function AboutPage() {
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
               About Us
             </p>
-            <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-              Visage Polyclinic
+            <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+              <span className="font-display font-normal italic text-brand-500">Visage</span> Polyclinic
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
               A multi-speciality clinic in the heart of Business Bay, Dubai, offering professional medical and aesthetic treatments under one roof.
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Established in September 2024
               </h2>
               <div className="mt-6 space-y-4 text-[15px] leading-[1.75] text-warm-600">
@@ -72,7 +72,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-14">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Our philosophy
             </h2>
           </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               { title: "Patient Comfort", body: "From the moment you arrive, our environment is designed to feel professional yet welcoming, clinical yet calm." },
             ].map((v) => (
               <div key={v.title} className="border-t border-warm-300 pt-6">
-                <h3 className="font-serif text-lg font-semibold text-ink">{v.title}</h3>
+                <h3 className="text-lg font-semibold text-ink">{v.title}</h3>
                 <p className="mt-3 text-[14px] leading-relaxed text-warm-600">{v.body}</p>
               </div>
             ))}
@@ -97,7 +97,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
-              <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
                 Multiple specialities, one roof
               </h2>
               <p className="mt-5 text-[15px] leading-[1.75] text-warm-600">
@@ -129,7 +129,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             Visit us in Business Bay
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">

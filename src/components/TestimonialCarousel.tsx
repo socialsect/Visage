@@ -118,7 +118,7 @@ export function TestimonialCarousel() {
               <p className="text-[15px] leading-relaxed text-warm-700 mb-6">&ldquo;{testimonial.text}&rdquo;</p>
             </div>
             <div>
-              <p className="font-serif text-lg font-semibold text-ink">{testimonial.name}</p>
+              <p className="text-lg font-semibold text-ink">{testimonial.name}</p>
               <p className="text-[11px] uppercase tracking-[0.1em] text-brand-500 mt-1">{testimonial.service}</p>
             </div>
           </div>

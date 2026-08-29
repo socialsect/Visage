@@ -1,7 +1,54 @@
 @import "tailwindcss";
 
+/* ─── Switzer (primary sans-serif) ─── */
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Regular.woff2") format("woff2"),
+       url("/fonts/Switzer-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Medium.woff2") format("woff2"),
+       url("/fonts/Switzer-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Semibold.woff2") format("woff2"),
+       url("/fonts/Switzer-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Bold.woff2") format("woff2"),
+       url("/fonts/Switzer-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Tempting (display/script accent) ─── */
+@font-face {
+  font-family: "Tempting";
+  src: url("/fonts/tempting.ttf") format("truetype"),
+       url("/fonts/tempting.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  /* Brand palette — muted lilac/mauve extracted from logo direction */
+  /* Brand palette — muted lilac/mauve */
   --color-brand-50: #f7f5f6;
   --color-brand-100: #f0eaed;
   --color-brand-200: #e2d8de;
@@ -40,8 +87,9 @@
   --color-accent-deep: #7a6178;
   --color-accent-light: #c9b8c3;
 
-  --font-serif: "Cormorant Garamond", "Georgia", serif;
-  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  /* Typography */
+  --font-sans: "Switzer", system-ui, -apple-system, sans-serif;
+  --font-display: "Tempting", "Georgia", cursive;
 }
 
 @layer base {
@@ -53,6 +101,7 @@
 
   body {
     font-family: var(--font-sans);
+    font-weight: 400;
     color: var(--color-ink);
     background-color: var(--color-surface);
   }
@@ -62,13 +111,12 @@
     color: var(--color-brand-900);
   }
 
-  /* Smooth image loading */
   img {
     transition: opacity 0.3s ease;
   }
 }
 
-/* Thin horizontal rule used across sections */
+/* Thin horizontal rule */
 .visage-divider {
   height: 1px;
   background: var(--color-warm-300);

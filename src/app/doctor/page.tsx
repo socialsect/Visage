@@ -30,8 +30,8 @@ export default function DoctorPage() {
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
                 Our Doctor
               </p>
-              <h1 className="font-serif text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-                Dr. Musa
+              <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
+                Dr. <span className="font-display font-normal italic text-brand-500">Musa</span>
               </h1>
               <p className="mt-1 text-[15px] font-medium text-brand-500">
                 MBChB &middot; General Practitioner &amp; Aesthetic Medicine
@@ -56,7 +56,7 @@ export default function DoctorPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl">
-            <h2 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Professional Profile
             </h2>
             <div className="mt-8 space-y-6">
@@ -98,7 +98,7 @@ export default function DoctorPage() {
       {/* CTA */}
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
             Schedule a consultation
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
