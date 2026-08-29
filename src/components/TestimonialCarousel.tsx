@@ -115,7 +115,7 @@ export function TestimonialCarousel() {
                   </svg>
                 ))}
               </div>
-              <p className="text-[15px] leading-relaxed text-warm-700 mb-6">"{testimonial.text}"</p>
+              <p className="text-[15px] leading-relaxed text-warm-700 mb-6">&ldquo;{testimonial.text}&rdquo;</p>
             </div>
             <div>
               <p className="font-serif text-lg font-semibold text-ink">{testimonial.name}</p>

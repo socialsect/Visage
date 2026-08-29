@@ -24,7 +24,7 @@ export function AskQuestionSection() {
             </h2>
             
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-warm-600">
-              Tell us a little about what's going on, and we'll point you to the right kind of support. No pressure, no commitment.
+              Tell us a little about what&apos;s going on, and we&apos;ll point you to the right kind of support. No pressure, no commitment.
             </p>
 
             <div className="mt-12 space-y-8">
@@ -37,7 +37,7 @@ export function AskQuestionSection() {
                 </div>
                 <div>
                   <h4 className="text-[14px] font-semibold text-ink">Completely confidential</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes directly to Dr. Musa's team — never shared with anyone.</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes directly to Dr. Musa&apos;s team — never shared with anyone.</p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export function AskQuestionSection() {
                 </div>
                 <div>
                   <h4 className="text-[14px] font-semibold text-ink">No obligation</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Asking a question doesn't commit you to anything. Start whenever you're ready.</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Asking a question doesn&apos;t commit you to anything. Start whenever you&apos;re ready.</p>
                 </div>
               </div>
             </div>
