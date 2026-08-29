@@ -34,7 +34,7 @@ export default function DoctorPage() {
                 Dr. Musa
               </h1>
               <p className="mt-1 text-[15px] font-medium text-brand-500">
-                General Practitioner &amp; Aesthetic Medicine
+                MBChB &middot; General Practitioner &amp; Aesthetic Medicine
               </p>
               <p className="mt-6 max-w-lg text-[15px] leading-[1.75] text-warm-600">
                 Every patient should be treated as an individual. Care should be professional and personalised. The clinic brings multiple specialities together under one roof to provide comprehensive care.
@@ -60,32 +60,38 @@ export default function DoctorPage() {
               Professional Profile
             </h2>
             <div className="mt-8 space-y-6">
-              {[
-                { label: "Qualifications", value: "[Qualifications pending]" },
-                { label: "Experience", value: "[Professional experience pending]" },
-                { label: "Specialisations", value: "[Specialisations pending]" },
-              ].map((field) => (
-                <div key={field.label} className="border-t border-warm-300 pt-5">
-                  <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
-                    {field.label}
-                  </h3>
-                  <p className="mt-2 text-[13px] italic text-warm-400">{field.value}</p>
+              <div className="border-t border-warm-300 pt-5">
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
+                  Qualifications
+                </h3>
+                <p className="mt-2 text-[14px] text-ink">MBChB</p>
+              </div>
+              <div className="border-t border-warm-300 pt-5">
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
+                  Title
+                </h3>
+                <p className="mt-2 text-[14px] text-ink">Physician &mdash; General Practice</p>
+              </div>
+              <div className="border-t border-warm-300 pt-5">
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
+                  Experience
+                </h3>
+                <div className="mt-2 space-y-1">
+                  <p className="text-[14px] text-ink">Over 17 years of medical experience</p>
+                  <p className="text-[14px] text-ink">9 years of practice in the UAE</p>
                 </div>
-              ))}
+              </div>
               <div className="border-t border-warm-300 pt-5">
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
                   Areas of Practice
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["Aesthetic Medicine", "General Practice", "Botox", "Dermal Fillers", "Skin Treatments", "Minor Surgery"].map((a) => (
+                  {["Aesthetic Medicine", "General Practice", "Botox", "Dermal Fillers", "PRP", "Skin Rejuvenation", "Chronic Disease Management"].map((a) => (
                     <span key={a} className="rounded-full border border-warm-300 px-3 py-1 text-[11px] font-medium text-warm-600">
                       {a}
                     </span>
                   ))}
                 </div>
-                <p className="mt-3 text-[12px] italic text-warm-400">
-                  [Full areas of practice pending confirmation]
-                </p>
               </div>
             </div>
           </div>
