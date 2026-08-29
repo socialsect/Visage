@@ -70,7 +70,7 @@ export default function HomePage() {
               A clinic built around<br />the <span className="font-display font-normal italic text-brand-500">patient</span>
             </h2>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-              Established in September 2024, Visage Polyclinic brings together aesthetic medicine and general medical services in the heart of Business Bay. Our approach is simple: professional care, personalised to each individual, delivered with clarity and respect.
+              Established in September 2024, Visage Polyclinic brings together aesthetic medicine and general medical services in the heart of Dubai. Our approach is simple: professional care, personalised to each individual, delivered with clarity and respect.
             </p>
           </div>
         </div>

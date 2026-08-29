@@ -31,7 +31,7 @@ export default function AboutPage() {
               <span className="font-display font-normal italic text-brand-500">Visage</span> Polyclinic
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-              A multi-speciality clinic in the heart of Business Bay, Dubai, offering professional medical and aesthetic treatments under one roof.
+              A multi-speciality clinic in the heart of Dubai, Dubai, offering professional medical and aesthetic treatments under one roof.
             </p>
           </div>
         </div>
