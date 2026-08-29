@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -21,14 +22,129 @@ export const metadata: Metadata = {
     "general practice Business Bay",
     "aesthetic medicine Business Bay",
     "skin treatments Dubai",
+    "dermal fillers Dubai",
+    "PRP treatment Dubai",
+    "microneedling Dubai",
+    "minor surgery Dubai",
+    "Dr Musa Dubai",
+    "polyclinic Business Bay",
   ],
+  authors: [{ name: "Visage Polyclinic LLC" }],
+  creator: "Visage Polyclinic LLC",
+  publisher: "Visage Polyclinic LLC",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Visage Polyclinic | Medical & Aesthetic Clinic",
+    title: "Visage Polyclinic | Medical & Aesthetic Clinic | Business Bay, Dubai",
     description:
-      "Professional medical and aesthetic treatments in Business Bay, Dubai. Personalised care under one roof.",
+      "Professional medical and aesthetic treatments in Business Bay, Dubai. Botox, fillers, skin treatments, general practice and minor surgery under one roof.",
+    url: "https://visagepolyclinic.com",
+    siteName: "Visage Polyclinic",
     type: "website",
     locale: "en_AE",
+    images: [
+      {
+        url: "/hero-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Visage Polyclinic - Medical & Aesthetic Clinic in Business Bay, Dubai",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Visage Polyclinic | Medical & Aesthetic Clinic | Dubai",
+    description:
+      "Professional medical and aesthetic treatments in Business Bay, Dubai. Personalised care under one roof.",
+    images: ["/hero-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://visagepolyclinic.com",
+  },
+  verification: {
+    google: "your-google-site-verification", // Replace with actual verification code
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "Visage Polyclinic LLC",
+  description:
+    "Multi-speciality medical and aesthetic clinic offering Botox, fillers, skin treatments, general practice, and minor surgery in Business Bay, Dubai.",
+  url: "https://visagepolyclinic.com",
+  telephone: "+97145758729",
+  email: "visagepolyclinicllc@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Office 711, Regal Tower, Business Bay",
+    addressLocality: "Dubai",
+    addressCountry: "AE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 25.1857,
+    longitude: 55.2646,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "08:00",
+      closes: "23:00",
+    },
+  ],
+  priceRange: "$$",
+  medicalSpecialty: [
+    "Aesthetic Medicine",
+    "General Practice",
+    "Dermatology",
+    "Minor Surgery",
+  ],
+  availableService: [
+    {
+      "@type": "MedicalProcedure",
+      name: "Botox",
+      procedureType: "http://schema.org/SurgicalProcedure",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Dermal Fillers",
+      procedureType: "http://schema.org/SurgicalProcedure",
+    },
+    {
+      "@type": "MedicalTherapy",
+      name: "PRP Treatment",
+    },
+    {
+      "@type": "MedicalTherapy",
+      name: "Chemical Peel",
+    },
+  ],
+  physician: {
+    "@type": "Physician",
+    name: "Dr. Musa",
+    jobTitle: "General Practitioner & Aesthetic Medicine",
+    medicalSpecialty: ["General Practice", "Aesthetic Medicine"],
+  },
+  sameAs: [],
 };
 
 export default function RootLayout({
@@ -38,6 +154,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-C386MN03NN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C386MN03NN');
+          `}
+        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="min-h-screen bg-surface text-ink antialiased">
         <Header />
         <main>{children}</main>
