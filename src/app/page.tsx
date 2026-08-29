@@ -172,8 +172,8 @@ export default function HomePage() {
             <div className="order-2 lg:order-1 lg:col-span-7">
               <div className="relative aspect-[16/10] overflow-hidden bg-warm-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1000&h=625&fit=crop&crop=center"
-                  alt="Dermal filler consultation"
+                  src="/dr-musa.jpg"
+                  alt="Dr. Musa - Dermal filler treatments at Visage Polyclinic"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover"
