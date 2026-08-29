@@ -1,56 +1,133 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 
 const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/treatments", label: "Treatments" },
-  { href: "/botox", label: "Botox" },
-  { href: "/fillers", label: "Fillers" },
+  {
+    label: "Treatments",
+    children: [
+      { href: "/treatments", label: "All Treatments" },
+      { href: "/botox", label: "Botox" },
+      { href: "/fillers", label: "Dermal Fillers" },
+      { href: "/treatments/skin-rejuvenation", label: "Skin Rejuvenation" },
+      { href: "/treatments/prp", label: "PRP" },
+      { href: "/treatments/prf", label: "PRF" },
+      { href: "/treatments/threads", label: "Thread Lift" },
+      { href: "/treatments/fat-melting", label: "Fat Melting" },
+      { href: "/treatments/skin-boosters", label: "Skin Boosters" },
+      { href: "/treatments/minor-aesthetic-procedures", label: "Minor Procedures" },
+    ],
+  },
   { href: "/doctor", label: "Doctor" },
+  { href: "/laboratory", label: "Laboratory" },
+  { href: "/publications", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const timeoutRef = useRef<NodeJS.Timeout>(null);
+
+  const handleDropdownEnter = (label: string) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpenDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
+    <header className="sticky top-0 z-50 border-b border-warm-200 bg-surface">
+      <div className="mx-auto flex h-[76px] max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Logo />
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`px-3.5 py-2 text-[13px] font-medium tracking-wide transition-colors duration-200 ${
-                pathname === link.href
-                  ? "text-brand-600"
-                  : "text-warm-600 hover:text-ink"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-2 lg:flex">
+          {navLinks.map((link) =>
+            link.children ? (
+              <div
+                key={link.label}
+                className="relative"
+                onMouseEnter={() => handleDropdownEnter(link.label)}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <button
+                  className={`flex items-center gap-1.5 px-4 py-2 text-[14px] font-medium transition-colors duration-200 ${
+                    link.children.some((c) => pathname === c.href)
+                      ? "text-brand-600"
+                      : "text-ink/70 hover:text-ink"
+                  }`}
+                >
+                  {link.label}
+                  <svg
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                      openDropdown === link.label ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {openDropdown === link.label && (
+                  <div
+                    className="absolute left-0 top-full z-50 mt-2 w-60 rounded-lg border border-warm-200 bg-white py-2 shadow-xl"
+                    onMouseEnter={() => handleDropdownEnter(link.label)}
+                    onMouseLeave={handleDropdownLeave}
+                  >
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setOpenDropdown(null)}
+                        className={`block px-5 py-2.5 text-[14px] transition-colors ${
+                          pathname === child.href
+                            ? "bg-brand-50 text-brand-600 font-medium"
+                            : "text-ink/70 hover:bg-warm-50 hover:text-ink"
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-2 text-[14px] font-medium transition-colors duration-200 ${
+                  pathname === link.href
+                    ? "text-brand-600"
+                    : "text-ink/70 hover:text-ink"
+                }`}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           <a
             href="tel:+97145758729"
-            className="text-[13px] font-medium text-warm-500 transition-colors hover:text-ink"
+            className="text-[14px] font-medium text-ink/50 transition-colors hover:text-ink"
           >
             04 575 8729
           </a>
           <Link
             href="/contact"
-            className="rounded-full bg-[#b79bb9] px-6 py-2.5 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
+            className="rounded-full bg-ink px-7 py-3 text-[14px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
           >
             Book Appointment
           </Link>
@@ -62,7 +139,7 @@ export function Header() {
             href="https://wa.me/971581867309"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-warm-800 p-2 text-white transition-colors hover:bg-[#b79bb9]"
+            className="rounded-full bg-warm-800 p-2.5 text-white transition-colors hover:bg-ink"
             aria-label="WhatsApp"
           >
             <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -71,7 +148,7 @@ export function Header() {
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-lg p-2 text-ink transition-colors hover:bg-warm-200"
+            className="rounded-lg p-2.5 text-ink transition-colors hover:bg-warm-100"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -90,29 +167,69 @@ export function Header() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="border-t border-warm-200 bg-surface lg:hidden">
+        <div className="border-t border-warm-200 bg-white lg:hidden">
           <nav className="mx-auto max-w-[1400px] px-5 py-6 sm:px-8">
             <div className="space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
-                    pathname === link.href
-                      ? "bg-brand-50 text-brand-600"
-                      : "text-warm-700 hover:bg-warm-100"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.children ? (
+                  <div key={link.label}>
+                    <button
+                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                      className="flex w-full items-center justify-between rounded-lg px-4 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-warm-50"
+                    >
+                      {link.label}
+                      <svg
+                        className={`h-4 w-4 transition-transform duration-200 ${
+                          openDropdown === link.label ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {openDropdown === link.label && (
+                      <div className="ml-4 space-y-1 border-l border-warm-200 pl-4">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => { setIsOpen(false); setOpenDropdown(null); }}
+                            className={`block rounded-lg px-4 py-2.5 text-[14px] transition-colors ${
+                              pathname === child.href
+                                ? "bg-brand-50 text-brand-600 font-medium"
+                                : "text-ink/60 hover:bg-warm-50 hover:text-ink"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block rounded-lg px-4 py-3.5 text-[15px] font-medium transition-colors ${
+                      pathname === link.href
+                        ? "bg-brand-50 text-brand-600"
+                        : "text-ink/80 hover:bg-warm-50 hover:text-ink"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
             <div className="mt-6 space-y-3 border-t border-warm-200 pt-6">
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block rounded-full bg-[#b79bb9] px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#997c9b]"
+                className="block rounded-full bg-ink px-6 py-3.5 text-center text-[14px] font-medium text-white transition-colors hover:bg-warm-800"
               >
                 Book Appointment
               </Link>
@@ -120,13 +237,13 @@ export function Header() {
                 href="https://wa.me/971581867309"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-full border border-warm-300 px-6 py-3 text-center text-sm font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
+                className="block rounded-full border border-warm-300 px-6 py-3.5 text-center text-[14px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
               >
                 WhatsApp Us
               </a>
               <a
                 href="tel:+97145758729"
-                className="block text-center text-sm font-medium text-warm-500"
+                className="block text-center text-[14px] font-medium text-warm-500"
               >
                 04 575 8729
               </a>
@@ -134,8 +251,6 @@ export function Header() {
           </nav>
         </div>
       )}
-      {/* Bottom border line */}
-      <div className="visage-divider" />
     </header>
   );
 }

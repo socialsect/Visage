@@ -1,0 +1,154 @@
+{
+  "site": {
+    "name": "Visage Polyclinic LLC",
+    "url": "https://visagepolyclinic.com",
+    "title": "Visage Polyclinic | Medical & Aesthetic Clinic | Business Bay, Dubai",
+    "description": "Visage Polyclinic offers professional medical and aesthetic treatments in Business Bay, Dubai. Botox, fillers, skin treatments, general practice and minor surgery under one roof.",
+    "phone": "+97145758729",
+    "whatsapp": "+971581867309",
+    "email": "visagepolyclinicllc@gmail.com",
+    "address": "Office 711, Regal Tower, Business Bay, Dubai, UAE",
+    "googleAnalyticsId": "G-C386MN03NN"
+  },
+  "pages": {
+    "home": {
+      "title": "Visage Polyclinic | Medical & Aesthetic Clinic | Business Bay, Dubai",
+      "description": "Medical and aesthetic treatments under one roof. Personalised care for every individual at Visage Polyclinic, Business Bay, Dubai.",
+      "keywords": ["Visage Polyclinic Dubai", "aesthetic clinic Dubai", "medical clinic Business Bay", "botox Dubai", "fillers Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com",
+      "schema": {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Visage Polyclinic LLC",
+        "description": "Multi-speciality medical and aesthetic clinic offering Botox, fillers, skin treatments, general practice, and minor surgery in Business Bay, Dubai.",
+        "url": "https://visagepolyclinic.com",
+        "telephone": "+97145758729",
+        "email": "visagepolyclinicllc@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Office 711, Regal Tower, Business Bay",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "08:00",
+          "closes": "23:00"
+        }],
+        "medicalSpecialty": ["Aesthetic Medicine", "General Practice", "Dermatology", "Minor Surgery"],
+        "physician": {
+          "@type": "Physician",
+          "name": "Dr. Musa",
+          "jobTitle": "General Practitioner & Aesthetic Medicine"
+        }
+      }
+    },
+    "about": {
+      "title": "About Visage Polyclinic",
+      "description": "Learn about Visage Polyclinic, a multi-speciality medical and aesthetic clinic established in September 2024 in Business Bay, Dubai.",
+      "keywords": ["about Visage Polyclinic", "clinic history Dubai", "medical clinic Business Bay"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/about"
+    },
+    "treatments": {
+      "title": "Treatments & Services",
+      "description": "Explore the full range of aesthetic and medical treatments at Visage Polyclinic, Business Bay, Dubai.",
+      "keywords": ["treatments Dubai", "aesthetic treatments Dubai", "medical services Business Bay"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments"
+    },
+    "botox": {
+      "title": "Botox Treatments",
+      "description": "Botox treatments at Visage Polyclinic, Business Bay, Dubai. Non-surgical wrinkle reduction for face, neck, underarms and more.",
+      "keywords": ["botox Dubai", "botox Business Bay", "wrinkle treatment Dubai", "anti-ageing Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/botox"
+    },
+    "fillers": {
+      "title": "Dermal Fillers",
+      "description": "Dermal filler treatments at Visage Polyclinic, Business Bay, Dubai. Facial contouring, lip fillers, skin boosters, Sculptra, and more.",
+      "keywords": ["fillers Dubai", "dermal fillers Business Bay", "lip fillers Dubai", "Sculptra Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/fillers"
+    },
+    "doctor": {
+      "title": "Dr. Musa",
+      "description": "Meet Dr. Musa at Visage Polyclinic, Business Bay, Dubai. MBChB, over 17 years of medical experience.",
+      "keywords": ["Dr Musa Dubai", "doctor Business Bay", "GP Dubai", "aesthetic doctor Dubai"],
+      "ogImage": "/dr-musa.jpg",
+      "canonical": "https://visagepolyclinic.com/doctor"
+    },
+    "contact": {
+      "title": "Contact & Book Appointment",
+      "description": "Contact Visage Polyclinic or book an appointment. Regal Tower, Floor 7, Business Bay, Dubai. Call 04 575 8729.",
+      "keywords": ["book appointment Dubai", "contact clinic Business Bay", "Visage Polyclinic phone"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/contact"
+    },
+    "laboratory": {
+      "title": "Laboratory & Diagnostic Services",
+      "description": "Comprehensive laboratory and diagnostic services at Visage Polyclinic, Business Bay, Dubai. Blood tests, pathology, microbiology, and more.",
+      "keywords": ["laboratory Dubai", "blood tests Business Bay", "diagnostic lab Dubai", "pathology Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/laboratory"
+    },
+    "publications": {
+      "title": "Health Insights & Blog",
+      "description": "Read the latest health insights, medical advice, and aesthetic treatment guides from Visage Polyclinic, Dubai.",
+      "keywords": ["health blog Dubai", "medical advice Dubai", "aesthetic tips", "skin care guide"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/publications"
+    },
+    "skinRejuvenation": {
+      "title": "Skin Rejuvenation Treatments",
+      "description": "Skin rejuvenation treatments at Visage Polyclinic, Business Bay, Dubai. Chemical peels, microneedling, mesotherapy, and more.",
+      "keywords": ["skin rejuvenation Dubai", "chemical peel Dubai", "microneedling Dubai", "mesotherapy Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/skin-rejuvenation"
+    },
+    "prp": {
+      "title": "PRP Treatment",
+      "description": "PRP (Platelet-Rich Plasma) treatment at Visage Polyclinic, Business Bay, Dubai. Natural skin rejuvenation.",
+      "keywords": ["PRP Dubai", "platelet rich plasma Dubai", "PRP facial Dubai", "vampire facial Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/prp"
+    },
+    "prf": {
+      "title": "PRF Treatment",
+      "description": "PRF (Platelet-Rich Fibrin) treatment at Visage Polyclinic, Business Bay, Dubai. Advanced regenerative therapy.",
+      "keywords": ["PRF Dubai", "platelet rich fibrin Dubai", "regenerative treatment Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/prf"
+    },
+    "threads": {
+      "title": "Thread Lift Treatment",
+      "description": "Non-surgical thread lift at Visage Polyclinic, Business Bay, Dubai. PDO thread lifting and skin tightening.",
+      "keywords": ["thread lift Dubai", "PDO threads Dubai", "non-surgical facelift Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/threads"
+    },
+    "fatMelting": {
+      "title": "Fat Melting Treatment",
+      description: "Fat melting injections at Visage Polyclinic, Business Bay, Dubai. Non-surgical fat reduction.",
+      "keywords": ["fat melting Dubai", "injectable lipolysis Dubai", "double chin treatment Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/fat-melting"
+    },
+    "skinBoosters": {
+      "title": "Skin Boosters",
+      "description": "Skin booster treatments at Visage Polyclinic, Business Bay, Dubai. Hydrating injectables for improved skin quality.",
+      "keywords": ["skin boosters Dubai", "hydrating injectables Dubai", "skin quality Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/skin-boosters"
+    },
+    "minorAesthetic": {
+      "title": "Minor Aesthetic Procedures",
+      "description": "Minor aesthetic procedures at Visage Polyclinic, Business Bay, Dubai. Wart removal, skin tag removal, mole removal.",
+      "keywords": ["wart removal Dubai", "skin tag removal Dubai", "mole removal Dubai"],
+      "ogImage": "/hero-image.jpg",
+      "canonical": "https://visagepolyclinic.com/treatments/minor-aesthetic-procedures"
+    }
+  }
+}

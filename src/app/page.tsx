@@ -17,8 +17,19 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="bg-surface">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+      <section className="relative overflow-hidden bg-surface">
+        {/* Logo watermark */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <Image
+            src="/logo.jpeg"
+            alt=""
+            width={600}
+            height={600}
+            className="opacity-[0.08]"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="flex min-h-[75dvh] flex-col items-center justify-center py-20 text-center lg:min-h-[80dvh]">
             <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.25em] text-brand-400">
               Visage Polyclinic &middot; Business Bay, Dubai

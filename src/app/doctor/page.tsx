@@ -85,9 +85,15 @@ export default function DoctorPage() {
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-warm-500">
                   Areas of Practice
                 </h3>
-                <div className="mt-3 space-y-2">
-                  <p className="text-[14px] text-ink">General Practice</p>
-                  <p className="text-[14px] text-warm-600">Aesthetic Medicine (Botox, Dermal Fillers, Skin Treatments, Minor Surgery, and more)</p>
+                <div className="mt-3 space-y-3">
+                  <div>
+                    <p className="text-[14px] font-medium text-ink">General Practice</p>
+                    <p className="mt-1 text-[13px] text-warm-600">Acute and chronic disease management (hypertension, diabetes), emergency cases, male health, adolescent health, minor surgeries, referrals, and diagnostic investigations including laboratory and radiological tests.</p>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-medium text-ink">Aesthetic Medicine</p>
+                    <p className="mt-1 text-[13px] text-warm-600">Botox, dermal fillers, skin rejuvenation, PRP, PRF, threads, fat melting, skin boosters, and minor aesthetic procedures.</p>
+                  </div>
                 </div>
               </div>
             </div>

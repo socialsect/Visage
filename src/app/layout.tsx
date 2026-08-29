@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   },
   description:
     "Visage Polyclinic offers professional medical and aesthetic treatments in Business Bay, Dubai. Botox, fillers, skin treatments, general practice and minor surgery under one roof.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
   keywords: [
     "Visage Polyclinic Dubai",
     "aesthetic clinic Dubai",
@@ -53,10 +67,11 @@ export const metadata: Metadata = {
     locale: "en_AE",
     images: [
       {
-        url: "/hero-image.jpg",
+        url: "https://visagepolyclinic.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
         width: 1200,
         height: 630,
         alt: "Visage Polyclinic - Medical & Aesthetic Clinic in Business Bay, Dubai",
+        type: "image/png",
       },
     ],
   },
@@ -65,7 +80,14 @@ export const metadata: Metadata = {
     title: "Visage Polyclinic | Medical & Aesthetic Clinic | Dubai",
     description:
       "Professional medical and aesthetic treatments in Business Bay, Dubai. Personalised care under one roof.",
-    images: ["/hero-image.jpg"],
+    images: [
+      {
+        url: "https://visagepolyclinic.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
+        width: 1200,
+        height: 630,
+        alt: "Visage Polyclinic - Medical & Aesthetic Clinic in Business Bay, Dubai",
+      },
+    ],
   },
   alternates: {
     canonical: "https://visagepolyclinic.com",

@@ -10,12 +10,13 @@ export const metadata: Metadata = {
 const aesthetic = [
   { title: "Botox", desc: "Wrinkle reduction and muscle relaxation across multiple treatment areas.", href: "/botox" },
   { title: "Dermal Fillers", desc: "Volume restoration, facial contouring, and wrinkle correction.", href: "/fillers" },
-  { title: "Skin Rejuvenation", desc: "Chemical peels, microneedling, and mesotherapy for improved skin quality." },
-  { title: "PRP & PRF", desc: "Platelet-based treatments to support skin regeneration." },
-  { title: "Threads", desc: "Non-surgical lift using absorbable thread technology." },
-  { title: "Fat Melting", desc: "Injectable treatment for localised fat reduction." },
-  { title: "Skin Boosters", desc: "Hydrating treatments that improve skin radiance from within." },
-  { title: "Minor Aesthetic Procedures", desc: "Wart, skin tag, and mole removal." },
+  { title: "Skin Rejuvenation", desc: "Chemical peels, microneedling, and mesotherapy for improved skin quality.", href: "/treatments/skin-rejuvenation" },
+  { title: "PRP", desc: "Platelet-Rich Plasma therapy to stimulate collagen and natural rejuvenation.", href: "/treatments/prp" },
+  { title: "PRF", desc: "Advanced platelet therapy with sustained growth factor release.", href: "/treatments/prf" },
+  { title: "Threads", desc: "Non-surgical lift and skin tightening using absorbable PDO threads.", href: "/treatments/threads" },
+  { title: "Fat Melting", desc: "Injectable treatment for localised fat reduction without surgery.", href: "/treatments/fat-melting" },
+  { title: "Skin Boosters", desc: "Hydrating injectables that improve skin radiance from within.", href: "/treatments/skin-boosters" },
+  { title: "Minor Aesthetic Procedures", desc: "Wart removal, skin tag removal, mole removal, and more.", href: "/treatments/minor-aesthetic-procedures" },
 ];
 
 const medical = [

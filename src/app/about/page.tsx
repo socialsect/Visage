@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "About Visage Polyclinic",
   description:
     "Learn about Visage Polyclinic, a multi-speciality medical and aesthetic clinic established in September 2024 in Business Bay, Dubai.",
+  openGraph: {
+    title: "About Visage Polyclinic | Business Bay, Dubai",
+    description: "Learn about Visage Polyclinic, a multi-speciality medical and aesthetic clinic established in September 2024 in Business Bay, Dubai.",
+    images: [{ url: "https://visagepolyclinic.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://visagepolyclinic.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai"],
+  },
 };
 
 export default function AboutPage() {
