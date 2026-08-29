@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { MapEmbed } from "@/components/MapEmbed";
+import { AskQuestionSection } from "@/components/AskQuestionSection";
 
 const featuredTreatments = [
   { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox" },
@@ -31,7 +34,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+                className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
               >
                 Book an Appointment
               </Link>
@@ -50,7 +53,7 @@ export default function HomePage() {
           <div className="relative lg:col-span-7">
             <div className="relative aspect-[4/5] overflow-hidden bg-warm-200 sm:aspect-[3/4] lg:aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&h=1250&fit=crop&crop=center"
+                src="/hero-image.jpg"
                 alt="Visage Polyclinic clinic interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
@@ -262,18 +265,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── How It Works ─── */}
+      <section className="bg-surface py-20 sm:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          {/* Header */}
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="h-px w-8 bg-warm-300"></span>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
+                Your Path
+              </p>
+              <span className="h-px w-8 bg-warm-300"></span>
+            </div>
+            <h2 className="relative inline-block font-serif text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+              How It Works
+            </h2>
+          </div>
+
+          {/* Steps */}
+          <div className="relative mt-24">
+            {/* Desktop connecting line */}
+            <div className="absolute left-[15%] top-8 hidden w-[70%] border-t border-warm-200 md:block"></div>
+            
+            <div className="grid gap-16 md:grid-cols-3 md:gap-8">
+              {/* Step 1 */}
+              <div className="relative flex flex-col items-center text-center">
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
+                  <span className="font-serif text-lg text-ink">1</span>
+                </div>
+                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Book Your Initial Session</h3>
+                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
+                  Start with a detailed consultation — a conversation about your concerns, aesthetic goals, and medical history.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative flex flex-col items-center text-center">
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
+                  <span className="font-serif text-lg text-ink">2</span>
+                </div>
+                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Get Your Personalised Plan</h3>
+                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
+                  Dr. Musa will recommend the right treatments or procedures tailored specifically for your unique situation.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative flex flex-col items-center text-center">
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
+                  <span className="font-serif text-lg text-ink">3</span>
+                </div>
+                <h3 className="mt-8 font-serif text-xl font-semibold text-ink">Begin Your Treatment</h3>
+                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
+                  Experience professional care in our Business Bay clinic, with continuous support throughout your journey.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
+
       {/* ─── Doctor ─── */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden bg-warm-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="h-24 w-24 text-warm-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <span className="absolute bottom-4 left-4 text-[11px] text-warm-500">[Photo pending]</span>
+                <Image
+                  src="/dr-musa.jpg"
+                  alt="Dr. Musa"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 384px"
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="lg:col-span-7">
@@ -309,26 +375,16 @@ export default function HomePage() {
 
       <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
 
-      {/* ─── Testimonials Placeholder ─── */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl text-center">
+      {/* ─── Testimonials Carousel ─── */}
+      <section className="py-20 sm:py-28 overflow-hidden">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 relative">
+          <div className="mb-10">
             <h2 className="font-serif text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Patient feedback
             </h2>
           </div>
-          <div className="mt-12 grid gap-px sm:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="border border-warm-300 p-8">
-                <div className="space-y-3">
-                  <div className="h-3 w-3/4 rounded bg-warm-200" />
-                  <div className="h-3 w-1/2 rounded bg-warm-200" />
-                  <div className="h-3 w-5/6 rounded bg-warm-200" />
-                </div>
-                <p className="mt-6 text-[12px] italic text-warm-400">[Testimonial pending]</p>
-              </div>
-            ))}
-          </div>
+          
+          <TestimonialCarousel />
         </div>
       </section>
 
@@ -347,7 +403,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+                  className="inline-flex items-center rounded-full bg-[#b79bb9] px-6 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
                 >
                   Book an Appointment
                 </Link>
@@ -360,27 +416,15 @@ export default function HomePage() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <div className="flex aspect-[16/9] items-center justify-center border border-warm-300 bg-warm-100">
-                <div className="text-center">
-                  <svg className="mx-auto h-10 w-10 text-warm-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
-                  </svg>
-                  <p className="mt-3 text-[13px] text-warm-500">[Google Maps embed pending]</p>
-                  <a
-                    href="https://maps.google.com/?q=Regal+Tower+Business+Bay+Dubai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center text-[12px] font-medium text-brand-500 hover:text-brand-700"
-                  >
-                    Open in Google Maps
-                  </a>
-                </div>
-              </div>
+              <MapEmbed />
             </div>
           </div>
         </div>
       </section>
+      <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
 
+      {/* ─── Ask A Question ─── */}
+      <AskQuestionSection />
       {/* ─── Final CTA ─── */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
@@ -393,7 +437,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
             >
               Book an Appointment
             </Link>

@@ -48,7 +48,7 @@ export default function BotoxPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+                  className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
                 >
                   Book Treatment
                 </Link>
@@ -78,6 +78,7 @@ export default function BotoxPage() {
         </div>
       </section>
 
+
       {/* Key facts */}
       <section className="border-y border-warm-300 py-10 sm:py-12">
         <div className="mx-auto grid max-w-[1400px] grid-cols-3 gap-px bg-warm-300 px-5 sm:px-8 lg:px-12">
@@ -91,6 +92,62 @@ export default function BotoxPage() {
               <p className="mt-1 text-[12px] text-warm-500">{f.sub}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-surface py-20 sm:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+            
+            {/* Left Column */}
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="h-px w-8 bg-warm-300"></span>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
+                  About Botox
+                </p>
+              </div>
+              
+              <h2 className="font-serif text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+                We make aesthetic care Safe, Natural, and Effective
+              </h2>
+              
+              <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-warm-600">
+                <p>
+                  At Visage Polyclinic, we believe aesthetic treatments should enhance your natural beauty, not mask it. We know that choosing to have a cosmetic procedure is a deeply personal decision. That is why we prioritize safety, precision, and natural-looking results, ensuring you feel confident in every step of your journey.
+                </p>
+                <p>
+                  We offer a tailored approach to Botox. Rather than a one-size-fits-all method, Dr. Musa carefully evaluates your facial anatomy and muscle movement. We see you as an individual, and we believe in your right to age gracefully on your own terms.
+                </p>
+                <p>
+                  Our work is rooted in real care, honesty, and medical expertise. No over-treatment, no unnatural freezing—just practical, professional aesthetic care that leaves you looking refreshed and revitalised.
+                </p>
+              </div>
+
+              <Link
+                href="/doctor"
+                className="mt-10 inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-[#997c9b] active:scale-[0.98]"
+              >
+                Meet Dr. Musa
+                <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Right Column (Image) */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-warm-200 lg:h-[600px]">
+              <Image
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=1000&fit=crop&crop=center"
+                alt="Consultation at Visage Polyclinic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -180,7 +237,7 @@ export default function BotoxPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
             >
               Book an Appointment
             </Link>

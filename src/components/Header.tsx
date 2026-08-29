@@ -50,7 +50,7 @@ export function Header() {
           </a>
           <Link
             href="/contact"
-            className="rounded-full bg-ink px-6 py-2.5 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+            className="rounded-full bg-[#b79bb9] px-6 py-2.5 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
           >
             Book Appointment
           </Link>
@@ -62,7 +62,7 @@ export function Header() {
             href="https://wa.me/971581867309"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-warm-800 p-2 text-white transition-colors hover:bg-ink"
+            className="rounded-full bg-warm-800 p-2 text-white transition-colors hover:bg-[#b79bb9]"
             aria-label="WhatsApp"
           >
             <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block rounded-full bg-ink px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-warm-800"
+                className="block rounded-full bg-[#b79bb9] px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#997c9b]"
               >
                 Book Appointment
               </Link>

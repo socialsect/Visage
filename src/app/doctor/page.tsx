@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dr. Musa",
@@ -16,12 +17,13 @@ export default function DoctorPage() {
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden bg-warm-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="h-24 w-24 text-warm-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <span className="absolute bottom-4 left-4 text-[11px] text-warm-500">[Photo pending]</span>
+                <Image
+                  src="/dr-musa.jpg"
+                  alt="Dr. Musa"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 384px"
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="lg:col-span-8">
@@ -39,7 +41,7 @@ export default function DoctorPage() {
               </p>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+                className="mt-8 inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
               >
                 Book with Dr. Musa
               </Link>
@@ -102,7 +104,7 @@ export default function DoctorPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
             >
               Book an Appointment
             </Link>

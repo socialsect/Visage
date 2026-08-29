@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { ContactInfo } from "@/components/ContactInfo";
-import { MapPlaceholder } from "@/components/MapPlaceholder";
+import { MapEmbed } from "@/components/MapEmbed";
 
 export const metadata: Metadata = {
   title: "Contact & Book Appointment",
@@ -98,7 +98,7 @@ export default function ContactPage() {
             </div>
             <div className="lg:col-span-5 space-y-8">
               <ContactInfo />
-              <MapPlaceholder />
+              <MapEmbed />
             </div>
           </div>
         </div>

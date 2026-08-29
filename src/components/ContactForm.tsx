@@ -147,7 +147,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-full bg-ink px-6 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+        className="w-full rounded-full bg-[#b79bb9] px-6 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
       >
         Request Appointment
       </button>

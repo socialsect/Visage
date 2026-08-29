@@ -1,40 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
-  variant?: "full" | "mark";
+  variant?: "full" | "mark"; // Keeping prop for backwards compatibility if used elsewhere
 }
 
-export function Logo({ className, variant = "full" }: LogoProps) {
+export function Logo({ className }: LogoProps) {
   return (
     <Link href="/" className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      {/* Medical cross mark — muted lilac */}
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <rect width="32" height="32" rx="6" fill="#917a8d" />
-        <path
-          d="M16 8v16M8 16h16"
-          stroke="white"
-          strokeWidth="2.5"
-          strokeLinecap="round"
+      <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full sm:h-12 sm:w-12">
+        <Image
+          src="/logo.jpeg"
+          alt="Visage Polyclinic Logo"
+          fill
+          className="object-cover"
         />
-      </svg>
-      {variant === "full" && (
-        <span className="flex flex-col leading-none">
-          <span className="font-serif text-[22px] font-semibold tracking-tight text-ink">
-            Visage
-          </span>
-          <span className="text-[9px] font-medium uppercase tracking-[0.22em] text-warm-500">
-            Polyclinic
-          </span>
-        </span>
-      )}
+      </div>
     </Link>
   );
 }

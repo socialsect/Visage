@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[3/4] overflow-hidden bg-warm-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=800&fit=crop&crop=center"
+                  src="/hero-image.jpg"
                   alt="Visage Polyclinic clinic interior"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]"
+              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
             >
               Book an Appointment
             </Link>
