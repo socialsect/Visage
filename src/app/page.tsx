@@ -226,7 +226,7 @@ export default function HomePage() {
               { title: "Chronic Disease Management", desc: "Ongoing monitoring and care for conditions including hypertension and diabetes." },
               { title: "Male Health", desc: "Dedicated medical services addressing men's specific health needs." },
               { title: "Adolescent Health", desc: "Medical care tailored to the needs of younger patients." },
-              { title: "Minor Surgery", desc: "In-clinic procedures including lipoma excision, cyst excision, and incision and drainage." },
+              { title: "Minor Surgery", desc: "In-clinic procedures including lipoma excision, cyst excision, wound stitching, and incision and drainage." },
               { title: "Emergency & Referral", desc: "Urgent care services and specialist referral coordination when needed." },
             ].map((s) => (
               <div key={s.title}>

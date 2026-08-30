@@ -32,6 +32,7 @@ const surgery = [
   { title: "Incision and Drainage", desc: "Procedures for abscesses and fluid collections." },
   { title: "Lipoma Excision", desc: "Surgical removal of benign fatty lumps." },
   { title: "Cyst Excision", desc: "Removal of skin cysts under local anaesthesia." },
+  { title: "Wound Stitching (ST&S)", desc: "Suturing and wound closure for cuts, lacerations, and surgical wounds." },
 ];
 
 export default function TreatmentsPage() {
