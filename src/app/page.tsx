@@ -347,14 +347,14 @@ export default function HomePage() {
                 Dr. Musa
               </h2>
               <p className="mt-1 text-[15px] font-medium text-brand-500">
-                General Practitioner &amp; Aesthetic Medicine
+                MBChB &middot; General Practitioner &amp; Aesthetic Medicine
               </p>
               <p className="mt-5 max-w-lg text-[15px] leading-[1.75] text-warm-600">
                 Every patient should be treated as an individual. Care should be professional and personalised. The clinic brings multiple specialities together under one roof to provide comprehensive care.
               </p>
-              <div className="mt-6 space-y-2 text-[13px] text-warm-500">
-                <p>[Qualifications pending]</p>
-                <p>[Professional experience pending]</p>
+              <div className="mt-6 space-y-1 text-[13px] text-warm-500">
+                <p>Over 17 years of medical experience</p>
+                <p>9 years of practice in the UAE</p>
               </div>
               <Link
                 href="/doctor"

@@ -55,9 +55,6 @@ export default function AboutPage() {
                 <p>
                   Professional and clinical where it matters, warm and welcoming where it counts.
                 </p>
-                <p className="text-[13px] italic text-warm-400">
-                  [Full clinic history and profile pending]
-                </p>
               </div>
             </div>
             <div className="lg:col-span-5">
