@@ -110,7 +110,7 @@ export default function AboutPage() {
                 Visage is not purely an aesthetic clinic. We provide a full spectrum of medical services, from general practice and chronic disease management to minor surgery and aesthetic treatments, all in one convenient location.
               </p>
               <Link
-                href="/treatments"
+                href="/aesthetic-treatments"
                 className="mt-8 inline-flex items-center text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700"
               >
                 View all treatments

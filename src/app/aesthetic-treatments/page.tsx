@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 };
 
 const aesthetic = [
-  { title: "Botox", desc: "Wrinkle reduction and muscle relaxation across multiple treatment areas.", href: "/botox" },
-  { title: "Dermal Fillers", desc: "Volume restoration, facial contouring, and wrinkle correction.", href: "/fillers" },
-  { title: "Skin Rejuvenation", desc: "Chemical peels, microneedling, and mesotherapy for improved skin quality.", href: "/treatments/skin-rejuvenation" },
-  { title: "PRP", desc: "Platelet-Rich Plasma therapy to stimulate collagen and natural rejuvenation.", href: "/treatments/prp" },
-  { title: "PRF", desc: "Advanced platelet therapy with sustained growth factor release.", href: "/treatments/prf" },
-  { title: "Threads", desc: "Non-surgical lift and skin tightening using absorbable PDO threads.", href: "/treatments/threads" },
-  { title: "Fat Melting", desc: "Injectable treatment for localised fat reduction without surgery.", href: "/treatments/fat-melting" },
-  { title: "Skin Boosters", desc: "Hydrating injectables that improve skin radiance from within.", href: "/treatments/skin-boosters" },
-  { title: "Minor Aesthetic Procedures", desc: "Wart removal, skin tag removal, mole removal, and more.", href: "/treatments/minor-aesthetic-procedures" },
+  { title: "Botox", desc: "Wrinkle reduction and muscle relaxation across multiple treatment areas.", href: "/botox-dubai" },
+  { title: "Dermal Fillers", desc: "Volume restoration, facial contouring, and wrinkle correction.", href: "/dermal-fillers-dubai" },
+  { title: "Skin Rejuvenation", desc: "Chemical peels, microneedling, and mesotherapy for improved skin quality.", href: "/skin-rejuvenation-dubai" },
+  { title: "PRP", desc: "Platelet-Rich Plasma therapy to stimulate collagen and natural rejuvenation.", href: "/prp-treatment-dubai" },
+  { title: "PRF", desc: "Advanced platelet therapy with sustained growth factor release.", href: "/prf-treatment-dubai" },
+  { title: "Threads", desc: "Non-surgical lift and skin tightening using absorbable PDO threads.", href: "/thread-lift-dubai" },
+  { title: "Fat Melting", desc: "Injectable treatment for localised fat reduction without surgery.", href: "/fat-melting-treatment-dubai" },
+  { title: "Skin Boosters", desc: "Hydrating injectables that improve skin radiance from within.", href: "/skin-boosters-dubai" },
+  { title: "Minor Aesthetic Procedures", desc: "Wart removal, skin tag removal, mole removal, and more.", href: "/minor-aesthetic-procedures-dubai" },
 ];
 
 const medical = [
@@ -86,14 +86,14 @@ export default function TreatmentsPage() {
           {/* Quick links */}
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <Link
-              href="/botox"
+              href="/botox-dubai"
               className="group border border-warm-300 p-6 transition-colors hover:border-brand-300"
             >
               <h3 className="text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Botox</h3>
               <p className="mt-2 text-[13px] text-warm-600">Wrinkle reduction and muscle relaxation. No downtime.</p>
             </Link>
             <Link
-              href="/fillers"
+              href="/dermal-fillers-dubai"
               className="group border border-warm-300 p-6 transition-colors hover:border-brand-300"
             >
               <h3 className="text-lg font-semibold text-ink group-hover:text-brand-600 transition-colors">Dermal Fillers</h3>

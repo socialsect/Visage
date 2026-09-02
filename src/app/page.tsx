@@ -5,12 +5,12 @@ import { MapEmbed } from "@/components/MapEmbed";
 import { AskQuestionSection } from "@/components/AskQuestionSection";
 
 const featuredTreatments = [
-  { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox" },
-  { title: "Dermal Fillers", description: "Restore volume, contour features, and address static wrinkles with precision injectable treatments.", href: "/fillers" },
-  { title: "Skin Rejuvenation", description: "Chemical peels, microneedling, PRP, and mesotherapy to improve skin quality and radiance.", href: "/treatments" },
-  { title: "Threads", description: "Non-surgical lift and skin tightening using absorbable thread technology.", href: "/treatments" },
-  { title: "Fat Melting", description: "Targeted injectable treatment for localised fat reduction without surgery.", href: "/treatments" },
-  { title: "Regenerative Medicine", description: "PRP, PRF, and biostimulators supporting your skin's natural renewal process.", href: "/treatments" },
+  { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox-dubai" },
+  { title: "Dermal Fillers", description: "Restore volume, contour features, and address static wrinkles with precision injectable treatments.", href: "/dermal-fillers-dubai" },
+  { title: "Skin Rejuvenation", description: "Chemical peels, microneedling, PRP, and mesotherapy to improve skin quality and radiance.", href: "/aesthetic-treatments" },
+  { title: "Threads", description: "Non-surgical lift and skin tightening using absorbable thread technology.", href: "/aesthetic-treatments" },
+  { title: "Fat Melting", description: "Targeted injectable treatment for localised fat reduction without surgery.", href: "/aesthetic-treatments" },
+  { title: "Regenerative Medicine", description: "PRP, PRF, and biostimulators supporting your skin's natural renewal process.", href: "/aesthetic-treatments" },
 ];
 
 export default function HomePage() {
@@ -52,7 +52,7 @@ export default function HomePage() {
                 Book an Appointment
               </Link>
               <Link
-                href="/treatments"
+                href="/aesthetic-treatments"
                 className="inline-flex items-center rounded-full border border-warm-300 px-8 py-3.5 text-[13px] font-medium text-warm-600 transition-all duration-200 hover:border-brand-300 hover:text-ink"
               >
                 Explore Treatments
@@ -137,7 +137,7 @@ export default function HomePage() {
                 ))}
               </div>
               <Link
-                href="/botox"
+                href="/botox-dubai"
                 className="mt-8 inline-flex items-center text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700"
               >
                 Full Botox overview
@@ -194,7 +194,7 @@ export default function HomePage() {
                 ))}
               </div>
               <Link
-                href="/fillers"
+                href="/dermal-fillers-dubai"
                 className="mt-8 inline-flex items-center text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700"
               >
                 Full fillers overview
@@ -357,7 +357,7 @@ export default function HomePage() {
                 <p>9 years of practice in the UAE</p>
               </div>
               <Link
-                href="/doctor"
+                href="/aesthetic-doctor-dubai"
                 className="mt-8 inline-flex items-center text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700"
               >
                 Full profile

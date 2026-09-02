@@ -4,31 +4,35 @@ import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Botox Treatments",
+  title: "Dermal Fillers",
   description:
-    "Botox treatments at Visage Polyclinic, Business Bay, Dubai. Non-surgical wrinkle reduction for face, neck, underarms and more.",
+    "Dermal filler treatments at Visage Polyclinic, Business Bay, Dubai. Facial contouring, lip fillers, skin boosters, Sculptra, and more.",
 };
 
 const areas = [
-  { title: "Full-Face Botox", desc: "Comprehensive treatment targeting multiple areas for a refreshed appearance." },
-  { title: "Lower-Face Slimming", desc: "Masseter treatment to slim the jawline and reduce muscle bulk." },
-  { title: "Nose-Tip Slimming", desc: "Refine the appearance of the nose tip with targeted muscle relaxation." },
-  { title: "Neck Botox", desc: "Treatment for horizontal neck lines and necklace lines." },
-  { title: "Trap Botox", desc: "Trapezius muscle treatment for shoulder contouring and tension relief." },
-  { title: "Underarm Botox", desc: "Reduction of excessive sweating by blocking sweat gland stimulation." },
-  { title: "Baby-Arm Botox", desc: "Targeted treatment for the upper arm area." },
-  { title: "Jotox", desc: "Lower face and jaw area treatment." },
+  { title: "Facial Contouring", desc: "Upper-face lift and reshaping using fillers to restore volume and improve proportions." },
+  { title: "Lip Fillers", desc: "Enhance lip shape, volume, and definition." },
+  { title: "Nose Fillers", desc: "Non-surgical rhinoplasty to refine the appearance of the nose." },
+  { title: "Chin Fillers", desc: "Enhance chin projection and contour for improved facial balance." },
+  { title: "Jawline Fillers", desc: "Define and sculpt the jawline for a more structured appearance." },
+  { title: "Body Fillers", desc: "Filler treatments for body contouring and volume enhancement." },
+];
+
+const boosters = [
+  { title: "Skin Boosters", desc: "Hydrating treatments that improve skin quality, texture, and radiance from within." },
+  { title: "Biostimulators", desc: "Treatments that stimulate your skin's own collagen production for gradual improvement." },
+  { title: "Sculptra", desc: "A biostimulatory treatment that restores facial volume gradually. Results may last up to 5 years." },
+  { title: "Salmon DNA", desc: "Regenerative treatment to support skin rejuvenation and healing." },
 ];
 
 const faqs = [
-  { question: "What is Botox?", answer: "Botox is a non-surgical treatment that relaxes targeted facial muscles to reduce the appearance of dynamic wrinkles. It can also reduce muscle bulk in certain areas." },
-  { question: "How long do results last?", answer: "Results typically last approximately 3 to 6 months, depending on the individual and treatment area." },
-  { question: "Is there downtime?", answer: "Botox is described as having no downtime. Most patients return to normal activities immediately, though specific aftercare guidelines apply for the first four hours." },
-  { question: "What should I avoid after treatment?", answer: "For the first four hours: avoid exercise, massaging the treated area, sleeping, smoking, alcohol, bending downwards (for face treatments), and cooking." },
-  { question: "When will I see results?", answer: "Results typically begin to appear within a few days, with full results visible at approximately two weeks." },
+  { question: "What are dermal fillers?", answer: "Injectable treatments used to restore volume, smooth static wrinkles, and contour facial features. Common areas include lips, cheeks, jawline, and chin." },
+  { question: "How long do fillers last?", answer: "Duration varies by product, area, and individual factors. Results typically range from 6 months to 2 years. Sculptra may last longer." },
+  { question: "Is there downtime?", answer: "Filler treatments generally have no downtime. Some mild swelling or bruising may occur and typically resolves within a few days." },
+  { question: "What is Sculptra?", answer: "A biostimulatory filler that stimulates your body's own collagen production. Unlike traditional fillers, it works gradually. Results may last up to 5 years." },
 ];
 
-export default function BotoxPage() {
+export default function FillersPage() {
   return (
     <>
       {/* Hero */}
@@ -40,10 +44,10 @@ export default function BotoxPage() {
                 Aesthetic Medicine
               </p>
               <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-                <span className="font-display font-normal italic text-brand-500">Botox</span> Treatments
+                Dermal <span className="font-display font-normal italic text-brand-500">Fillers</span>
               </h1>
               <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-                A non-surgical treatment to reduce dynamic wrinkles by relaxing targeted muscles. It can also decrease muscle bulk in certain areas.
+                Address static wrinkles, restore lost volume, and contour facial features with precision injectable treatments.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
@@ -65,8 +69,8 @@ export default function BotoxPage() {
             <div className="lg:col-span-7">
               <div className="relative aspect-[16/10] overflow-hidden bg-warm-200">
                 <Image
-                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1000&h=625&fit=crop&crop=center"
-                  alt="Botox treatment at Visage Polyclinic"
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1000&h=625&fit=crop&crop=center"
+                  alt="Dermal filler consultation"
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover"
@@ -84,8 +88,8 @@ export default function BotoxPage() {
         <div className="mx-auto grid max-w-[1400px] grid-cols-3 gap-px bg-warm-300 px-5 sm:px-8 lg:px-12">
           {[
             { label: "No Downtime", sub: "Resume activities immediately" },
-            { label: "3–6 Months", sub: "Typical duration of results" },
-            { label: "Non-Surgical", sub: "Injectable with minimal discomfort" },
+            { label: "6 Months – 2 Years", sub: "Typical result duration" },
+            { label: "Up to 5 Years", sub: "Sculptra results may last" },
           ].map((f) => (
             <div key={f.label} className="bg-surface p-6 text-center">
               <p className="text-xl font-semibold text-ink">{f.label}</p>
@@ -105,28 +109,28 @@ export default function BotoxPage() {
               <div className="flex items-center gap-4 mb-6">
                 <span className="h-px w-8 bg-warm-300"></span>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
-                  About Botox
+                  About Dermal Fillers
                 </p>
               </div>
               
               <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-                We make aesthetic care Safe, Natural, and Effective
+                We make facial contouring Safe, Natural, and Harmonious
               </h2>
               
               <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-warm-600">
                 <p>
-                  At Visage Polyclinic, we believe aesthetic treatments should enhance your natural beauty, not mask it. We know that choosing to have a cosmetic procedure is a deeply personal decision. That is why we prioritize safety, precision, and natural-looking results, ensuring you feel confident in every step of your journey.
+                  At Visage Polyclinic, we approach dermal fillers as an art form rooted in medical science. We believe in restoring volume and enhancing your natural contours, ensuring you look like the best version of yourself, not someone else.
                 </p>
                 <p>
-                  We offer a tailored approach to Botox. Rather than a one-size-fits-all method, Dr. Musa carefully evaluates your facial anatomy and muscle movement. We see you as an individual, and we believe in your right to age gracefully on your own terms.
+                  Dr. Musa carefully assesses your facial structure before recommending any treatment. From subtle lip enhancements to full-face contouring, we use only premium fillers and advanced techniques to deliver results that are elegant and undetectable.
                 </p>
                 <p>
-                  Our work is rooted in real care, honesty, and medical expertise. No over-treatment, no unnatural freezing—just practical, professional aesthetic care that leaves you looking refreshed and revitalised.
+                  Our philosophy is simple: honesty and excellence in every procedure. We prioritize your safety and satisfaction above all else, taking the time to understand your unique aesthetic goals.
                 </p>
               </div>
 
               <Link
-                href="/doctor"
+                href="/aesthetic-doctor-dubai"
                 className="mt-10 inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3.5 text-[14px] font-medium text-white transition-all hover:bg-[#997c9b] active:scale-[0.98]"
               >
                 Meet Dr. Musa
@@ -139,8 +143,8 @@ export default function BotoxPage() {
             {/* Right Column (Image) */}
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-warm-200 lg:h-[600px]">
               <Image
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=1000&fit=crop&crop=center"
-                alt="Consultation at Visage Polyclinic"
+                src="https://images.unsplash.com/photo-1512403754473-27835f7b9984?w=800&h=1000&fit=crop&crop=center"
+                alt="Consultation for dermal fillers at Visage Polyclinic"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -159,11 +163,33 @@ export default function BotoxPage() {
               Treatment Areas
             </h2>
           </div>
-          <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-3">
             {areas.map((a) => (
-              <div key={a.title} className="bg-surface p-6">
+              <div key={a.title} className="bg-surface p-7">
                 <h3 className="text-[14px] font-semibold text-ink">{a.title}</h3>
-                <p className="mt-2 text-[12px] leading-relaxed text-warm-600">{a.desc}</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{a.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skin Boosters */}
+      <section className="bg-surface-alt py-20 sm:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              Boosters &amp; Biostimulators
+            </h2>
+            <p className="mt-3 text-[14px] text-warm-600">
+              Treatments that support your skin&apos;s natural renewal for gradual, lasting improvement.
+            </p>
+          </div>
+          <div className="grid gap-px bg-warm-300 sm:grid-cols-2">
+            {boosters.map((b) => (
+              <div key={b.title} className="bg-surface p-7">
+                <h3 className="text-base font-semibold text-ink">{b.title}</h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -171,7 +197,7 @@ export default function BotoxPage() {
       </section>
 
       {/* What to Expect */}
-      <section className="bg-surface-alt py-20 sm:py-28">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
@@ -180,9 +206,9 @@ export default function BotoxPage() {
           </div>
           <div className="grid gap-10 sm:grid-cols-3">
             {[
-              { num: "1", title: "Consultation", body: "A thorough discussion of your goals, medical history, and treatment plan." },
-              { num: "2", title: "Treatment", body: "Precise injections into targeted muscles. A short procedure with minimal discomfort." },
-              { num: "3", title: "Aftercare", body: "Follow specific guidelines for four hours. Results develop over the following days." },
+              { num: "1", title: "Consultation", body: "Discuss your goals, review options, and develop a personalised plan." },
+              { num: "2", title: "Treatment", body: "Precise filler placement. Treatment times vary by area and product." },
+              { num: "3", title: "Results", body: "Immediate results with fillers. Some initial swelling settles within days." },
             ].map((s) => (
               <div key={s.num} className="border-t border-warm-300 pt-6">
                 <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
@@ -190,30 +216,6 @@ export default function BotoxPage() {
                 <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Aftercare */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              Post-Treatment Guidelines
-            </h2>
-            <p className="mt-3 text-[14px] text-warm-600">
-              For the first four hours after treatment:
-            </p>
-            <div className="mt-6 space-y-2">
-              {["Avoid active exercise", "Do not massage the treated area", "Avoid sleeping", "Do not smoke", "Avoid alcohol", "Avoid bending downwards (for face treatments)", "Avoid cooking"].map((item) => (
-                <div key={item} className="flex items-center gap-3 border-b border-warm-200 py-3">
-                  <svg className="h-3.5 w-3.5 flex-shrink-0 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  <span className="text-[13px] text-warm-700">{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -229,10 +231,10 @@ export default function BotoxPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Ready to try Botox?
+            Interested in dermal fillers?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
-            Book a consultation to discuss your goals and find out if Botox is right for you.
+            Book a consultation to learn which treatments may be suitable for you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
