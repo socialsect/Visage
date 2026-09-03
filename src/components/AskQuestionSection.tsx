@@ -20,11 +20,11 @@ export function AskQuestionSection() {
             </div>
             
             <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-              Not sure where<br />to start? Just ask.
+              Not Sure Where<br />to Start? Just Ask.
             </h2>
             
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-warm-600">
-              Tell us a little about what&apos;s going on, and we&apos;ll point you to the right kind of support. No pressure, no commitment.
+              Not sure which treatment fits your situation? Describe what's on your mind, and we'll guide you to the right next step. No pressure, no commitment.
             </p>
 
             <div className="mt-12 space-y-8">
@@ -36,8 +36,8 @@ export function AskQuestionSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-[14px] font-semibold text-ink">Completely confidential</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes directly to Dr. Musa&apos;s team — never shared with anyone.</p>
+                  <h4 className="text-[14px] font-semibold text-ink">Kept private</h4>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes straight to Dr Musa's team and isn't shared beyond the clinic.</p>
                 </div>
               </div>
 
@@ -49,8 +49,8 @@ export function AskQuestionSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-[14px] font-semibold text-ink">Reply within one working day</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">A real person reads every message and responds personally.</p>
+                  <h4 className="text-[14px] font-semibold text-ink">A response within a day</h4>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">A real person reviews and replies to every message personally.</p>
                 </div>
               </div>
 
@@ -62,8 +62,8 @@ export function AskQuestionSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-[14px] font-semibold text-ink">No obligation</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Asking a question doesn&apos;t commit you to anything. Start whenever you&apos;re ready.</p>
+                  <h4 className="text-[14px] font-semibold text-ink">Zero obligation</h4>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Reaching out doesn't commit you to booking anything.</p>
                 </div>
               </div>
             </div>

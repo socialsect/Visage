@@ -4,34 +4,51 @@ import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Botox Treatments",
+  title: "Botox Dubai | Anti-Wrinkle Treatment at Visage Polyclinic",
   description:
-    "Botox treatments at Visage Polyclinic, Business Bay, Dubai. Non-surgical wrinkle reduction for face, neck, underarms and more.",
+    "Botox in Dubai for forehead lines, frown lines and crow's feet. Natural-looking results, no downtime. Book a Botox consultation at Visage Polyclinic.",
 };
 
 const areas = [
-  { title: "Full-Face Botox", desc: "Comprehensive treatment targeting multiple areas for a refreshed appearance." },
-  { title: "Lower-Face Slimming", desc: "Masseter treatment to slim the jawline and reduce muscle bulk." },
-  { title: "Nose-Tip Slimming", desc: "Refine the appearance of the nose tip with targeted muscle relaxation." },
-  { title: "Neck Botox", desc: "Treatment for horizontal neck lines and necklace lines." },
-  { title: "Trap Botox", desc: "Trapezius muscle treatment for shoulder contouring and tension relief." },
-  { title: "Underarm Botox", desc: "Reduction of excessive sweating by blocking sweat gland stimulation." },
-  { title: "Baby-Arm Botox", desc: "Targeted treatment for the upper arm area." },
-  { title: "Jotox", desc: "Lower face and jaw area treatment." },
+  { title: "Full-Face Botox", desc: "A coordinated treatment across multiple areas for balanced, natural-looking results rather than one isolated fix." },
+  { title: "Lower-Face Slimming", desc: "Targets the masseter muscle to soften a square jawline and ease jaw tension." },
+  { title: "Nose-Tip Slimming", desc: "Relaxes the small muscle that pulls the nose tip downward when you smile, for a subtler nasal profile." },
+  { title: "Neck Botox", desc: "Softens vertical neck bands (often called \"necklace lines\") caused by repeated muscle contraction." },
+  { title: "Trap Botox", desc: "Treats the trapezius muscle to ease shoulder tension and create a longer, more relaxed neckline." },
+  { title: "Underarm Botox", desc: "Reduces excessive underarm sweating by temporarily blocking the sweat glands' nerve signals." },
+  { title: "Baby Botox", desc: "A lighter, more conservative dose for subtle softening — ideal for first-timers or a more natural look." },
+  { title: "Jotox", desc: "A precise, low-dose technique targeting the jawline and lower face for a softened, more defined contour." },
 ];
 
 const faqs = [
-  { question: "What is Botox?", answer: "Botox is a non-surgical treatment that relaxes targeted facial muscles to reduce the appearance of dynamic wrinkles. It can also reduce muscle bulk in certain areas." },
-  { question: "How long do results last?", answer: "Results typically last approximately 3 to 6 months, depending on the individual and treatment area." },
-  { question: "Is there downtime?", answer: "Botox is described as having no downtime. Most patients return to normal activities immediately, though specific aftercare guidelines apply for the first four hours." },
-  { question: "What should I avoid after treatment?", answer: "For the first four hours: avoid exercise, massaging the treated area, sleeping, smoking, alcohol, bending downwards (for face treatments), and cooking." },
-  { question: "When will I see results?", answer: "Results typically begin to appear within a few days, with full results visible at approximately two weeks." },
+  { question: "What is Botox?", answer: "Botox is a purified protein injected into targeted facial muscles. It temporarily blocks the nerve signals that cause those muscles to contract, softening the wrinkles created by repeated expression — like frowning or squinting." },
+  { question: "How long do results last?", answer: "Most patients see results last around three to six months, though this varies depending on the treatment area, your muscle strength, and how your body metabolises the treatment. Results typically fade gradually rather than disappearing overnight." },
+  { question: "Is there downtime?", answer: "No. Botox is a walk-in, walk-out treatment — most patients return to normal activities the same day. You may notice slight redness or small bumps at the injection sites, which usually settle within a few hours." },
+  { question: "What should I avoid after treatment?", answer: "For the first four hours, avoid exercise, alcohol, lying down, and touching or massaging the treated area. This helps keep the product exactly where it was placed." },
+  { question: "When will I see results?", answer: "Botox doesn't work instantly. Most patients start noticing changes within three to five days, with full results visible at the two-week mark." },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
 export default function BotoxPage() {
   return (
     <>
-      {/* Hero */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {/* 1. Hero Section */}
       <section className="py-20 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
@@ -40,10 +57,10 @@ export default function BotoxPage() {
                 Aesthetic Medicine
               </p>
               <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-                <span className="font-display font-normal italic text-brand-500">Botox</span> Treatments
+                <span className="font-display font-normal italic text-brand-500">Botox</span> Treatments in Dubai
               </h1>
               <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-                A non-surgical treatment to reduce dynamic wrinkles by relaxing targeted muscles. It can also decrease muscle bulk in certain areas.
+                Botox smooths dynamic wrinkles by gently relaxing the muscles that cause them — forehead lines, frown lines, and crow's feet included. At Visage Polyclinic, every Botox treatment is planned around your facial anatomy and expression patterns, so the result reads as refreshed, not frozen.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
@@ -78,14 +95,13 @@ export default function BotoxPage() {
         </div>
       </section>
 
-
-      {/* Key facts */}
+      {/* 2. Trust Bar */}
       <section className="border-y border-warm-300 py-10 sm:py-12">
         <div className="mx-auto grid max-w-[1400px] grid-cols-3 gap-px bg-warm-300 px-5 sm:px-8 lg:px-12">
           {[
-            { label: "No Downtime", sub: "Resume activities immediately" },
+            { label: "No Downtime", sub: "Back to your day immediately after treatment" },
             { label: "3–6 Months", sub: "Typical duration of results" },
-            { label: "Non-Surgical", sub: "Injectable with minimal discomfort" },
+            { label: "Non-Surgical", sub: "A quick injectable procedure, no incisions" },
           ].map((f) => (
             <div key={f.label} className="bg-surface p-6 text-center">
               <p className="text-xl font-semibold text-ink">{f.label}</p>
@@ -95,7 +111,7 @@ export default function BotoxPage() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* 3. "About Botox" Section */}
       <section className="bg-surface py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
@@ -110,18 +126,18 @@ export default function BotoxPage() {
               </div>
               
               <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-                We make aesthetic care Safe, Natural, and Effective
+                Safe, Considered, and Never Overdone
               </h2>
               
               <div className="mt-8 space-y-5 text-[15px] leading-relaxed text-warm-600">
                 <p>
-                  At Visage Polyclinic, we believe aesthetic treatments should enhance your natural beauty, not mask it. We know that choosing to have a cosmetic procedure is a deeply personal decision. That is why we prioritize safety, precision, and natural-looking results, ensuring you feel confident in every step of your journey.
+                  Botox is one of the most researched treatments in aesthetic medicine, and also one of the easiest to get wrong. Overfilled brows and a permanently surprised expression usually come down to poor planning, not the product itself.
                 </p>
                 <p>
-                  We offer a tailored approach to Botox. Rather than a one-size-fits-all method, Dr. Musa carefully evaluates your facial anatomy and muscle movement. We see you as an individual, and we believe in your right to age gracefully on your own terms.
+                  At Visage, Dr. Musa takes time before the first injection to understand how your face actually moves — which muscles drive your expressions, where you're already losing elasticity, and what you want to look like afterward, not just what a standard unit count would produce.
                 </p>
                 <p>
-                  Our work is rooted in real care, honesty, and medical expertise. No over-treatment, no unnatural freezing—just practical, professional aesthetic care that leaves you looking refreshed and revitalised.
+                  The goal is always the same: you, just less tired-looking. Not a different face. We won't recommend more treatment than your face needs, and we'll tell you honestly if Botox isn't the right fit for what you're trying to achieve.
                 </p>
               </div>
 
@@ -151,13 +167,16 @@ export default function BotoxPage() {
         </div>
       </section>
 
-      {/* Treatment Areas */}
+      {/* 4. Treatment Areas Section */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10">
+          <div className="mb-10 max-w-2xl">
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Treatment Areas
             </h2>
+            <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
+              Botox isn't a single, generic injection pattern — treatment is customised by area, depending on your muscle activity and goals.
+            </p>
           </div>
           <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-4">
             {areas.map((a) => (
@@ -170,7 +189,7 @@ export default function BotoxPage() {
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* 5. "What to Expect" Section */}
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-10">
@@ -180,9 +199,9 @@ export default function BotoxPage() {
           </div>
           <div className="grid gap-10 sm:grid-cols-3">
             {[
-              { num: "1", title: "Consultation", body: "A thorough discussion of your goals, medical history, and treatment plan." },
-              { num: "2", title: "Treatment", body: "Precise injections into targeted muscles. A short procedure with minimal discomfort." },
-              { num: "3", title: "Aftercare", body: "Follow specific guidelines for four hours. Results develop over the following days." },
+              { num: "1", title: "Consultation", body: "We talk through your goals, medical history and facial movement before recommending anything — no treatment is booked on the spot." },
+              { num: "2", title: "Treatment", body: "A short, precise procedure using a fine needle. Most patients describe mild discomfort, comparable to a quick pinch." },
+              { num: "3", title: "Aftercare", body: "Clear aftercare instructions to follow for the first few hours. Full results develop gradually over the following one to two weeks." },
             ].map((s) => (
               <div key={s.num} className="border-t border-warm-300 pt-6">
                 <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
@@ -194,7 +213,7 @@ export default function BotoxPage() {
         </div>
       </section>
 
-      {/* Aftercare */}
+      {/* 6. "Post-Treatment Guidelines" Section */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl">
@@ -205,7 +224,15 @@ export default function BotoxPage() {
               For the first four hours after treatment:
             </p>
             <div className="mt-6 space-y-2">
-              {["Avoid active exercise", "Do not massage the treated area", "Avoid sleeping", "Do not smoke", "Avoid alcohol", "Avoid bending downwards (for face treatments)", "Avoid cooking"].map((item) => (
+              {[
+                "Skip strenuous exercise",
+                "Don't massage or rub the treated area",
+                "Stay upright — avoid lying down",
+                "Hold off on smoking",
+                "Hold off on alcohol",
+                "Avoid bending your head downward (for facial treatments)",
+                "Skip cooking or activities involving heat exposure to the face"
+              ].map((item) => (
                 <div key={item} className="flex items-center gap-3 border-b border-warm-200 py-3">
                   <svg className="h-3.5 w-3.5 flex-shrink-0 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -218,21 +245,21 @@ export default function BotoxPage() {
         </div>
       </section>
 
-      {/* FAQs */}
+      {/* 7. FAQ Section */}
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5 sm:px-8 lg:px-12">
           <FAQAccordion items={faqs} title="Frequently Asked Questions" />
         </div>
       </section>
 
-      {/* CTA */}
+      {/* 8. Closing CTA */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Ready to try Botox?
+            Ready to Try Botox?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
-            Book a consultation to discuss your goals and find out if Botox is right for you.
+            Book a consultation to talk through your goals and find out honestly whether Botox is the right fit for you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

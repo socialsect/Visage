@@ -8,11 +8,11 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const metadata: Metadata = {
   metadataBase: new URL("https://visagepolyclinic.com"),
   title: {
-    default: "Visage Polyclinic | Medical & Aesthetic Clinic | Business Bay, Dubai",
+    default: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
     template: "%s | Visage Polyclinic",
   },
   description:
-    "Visage Polyclinic offers professional medical and aesthetic treatments in Business Bay, Dubai. Botox, fillers, skin treatments, general practice and minor surgery under one roof.",
+    "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Visage Polyclinic | Medical & Aesthetic Clinic | Business Bay, Dubai",
+    title: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
     description:
-      "Professional medical and aesthetic treatments in Business Bay, Dubai. Botox, fillers, skin treatments, general practice and minor surgery under one roof.",
+      "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
     url: "https://visagepolyclinic.com",
     siteName: "Visage Polyclinic",
     type: "website",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visage Polyclinic | Medical & Aesthetic Clinic | Dubai",
+    title: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
     description:
-      "Professional medical and aesthetic treatments in Business Bay, Dubai. Personalised care under one roof.",
+      "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
     images: [
       {
         url: "https://visagepolyclinic.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
@@ -194,7 +194,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-surface text-ink antialiased">
+      <body suppressHydrationWarning className="min-h-screen bg-surface text-ink antialiased">
         <Header />
         <main>{children}</main>
         <Footer />

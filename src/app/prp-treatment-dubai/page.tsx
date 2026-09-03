@@ -3,52 +3,92 @@ import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "PRP Treatment",
+  title: "PRP Treatment Dubai | Platelet-Rich Plasma Therapy",
   description:
-    "PRP (Platelet-Rich Plasma) treatment at Visage Polyclinic, Business Bay, Dubai. Natural skin rejuvenation using your body's own growth factors.",
+    "PRP treatment in Dubai using your own platelet-rich plasma to stimulate collagen and natural skin renewal. For face, under-eyes, hair and more. Book now.",
 };
 
 const uses = [
-  { title: "Facial Rejuvenation", desc: "Improve skin texture, tone, and elasticity using your own platelet-rich plasma to stimulate collagen production." },
-  { title: "Under-Eye Treatment", desc: "Address dark circles and fine lines in the delicate under-eye area with PRP therapy." },
-  { title: "Hair Restoration", desc: "Stimulate hair growth and improve hair density by injecting PRP into the scalp." },
-  { title: "Acne Scarring", desc: "Improve the appearance of acne scars by promoting collagen remodelling and skin renewal." },
-  { title: "Neck & Decolletage", desc: "Rejuvenate the skin on the neck and chest area, improving texture and reducing signs of ageing." },
-  { title: "Hand Rejuvenation", desc: "Restore volume and improve skin quality on the hands for a more youthful appearance." },
+  { title: "Facial Rejuvenation", desc: "Encourages collagen production across the face for improved texture, tone and overall skin elasticity." },
+  { title: "Under-Eye Treatment", desc: "A gentle option for the delicate under-eye area, helping to soften fine lines and reduce the appearance of dark circles." },
+  { title: "Hair Restoration", desc: "Injected directly into the scalp, PRP can help stimulate follicle activity and support improved hair density over time." },
+  { title: "Acne Scarring", desc: "Promotes collagen remodelling in scarred tissue, gradually softening the appearance of acne scars." },
+  { title: "Neck & Décolletage", desc: "Extends rejuvenation beyond the face to address texture and early signs of ageing on the neck and chest." },
+  { title: "Hand Rejuvenation", desc: "Restores volume and improves skin quality on the hands, an area that often shows age before the face does." },
 ];
 
 const faqs = [
-  { question: "What is PRP?", answer: "PRP (Platelet-Rich Plasma) is a treatment that uses your own blood. A small sample is drawn, centrifuged to concentrate the platelets, and then applied or injected into the treatment area. The platelets contain growth factors that stimulate healing and collagen production." },
-  { question: "How long does PRP take?", answer: "The procedure typically takes 30-60 minutes, including the blood draw and preparation time." },
-  { question: "Is PRP safe?", answer: "PRP uses your own blood, which significantly reduces the risk of allergic reaction or rejection. It is considered a safe treatment when performed by a qualified practitioner." },
-  { question: "When will I see results?", answer: "Results develop gradually over several weeks as collagen production increases. Most patients notice improvement within 3-6 weeks, with optimal results at 3 months." },
-  { question: "How many sessions are needed?", answer: "A course of 3-4 sessions spaced 4-6 weeks apart is typically recommended for optimal results. Maintenance sessions may be advised." },
+  { question: "What is PRP?", answer: "PRP (platelet-rich plasma) is a regenerative treatment made from your own blood. After a small sample is drawn and processed, the platelet-rich portion — concentrated with growth factors is reintroduced to stimulate your skin or scalp's natural repair process." },
+  { question: "How long does PRP take?", answer: "A typical PRP session including blood draw, preparation and application takes around 45 minutes to an hour, depending on the treatment area." },
+  { question: "Is PRP safe?", answer: "Because PRP uses your own blood, the risk of allergic reaction or rejection is minimal compared to treatments using external substances. As with any injectable procedure, it should only be carried out by a qualified medical practitioner." },
+  { question: "When will I see results?", answer: "PRP works gradually, as your body's own collagen production responds to treatment. Most patients begin noticing improvement over several weeks, with results continuing to build over the following months." },
+  { question: "How many sessions are needed?", answer: "PRP is typically most effective as a short course of sessions spaced several weeks apart, followed by periodic maintenance treatments. The right schedule depends on the area treated and your skin or scalp's response." },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
 export default function PRPPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {/* 1. Hero Section */}
       <section className="py-20 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">Regenerative Medicine</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
+              Regenerative Medicine
+            </p>
             <h1 className="text-[clamp(2rem,4.5vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-ink">
-              <span className="font-display font-normal italic text-brand-500">PRP</span> Treatment
+              <span className="font-display font-normal italic text-brand-500">PRP</span> Treatment in Dubai
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-              Platelet-Rich Plasma therapy uses your body&apos;s own growth factors to stimulate collagen production and natural skin rejuvenation. A natural approach to restoring volume and improving skin quality.
+              PRP works with your own biology, not against it. By concentrating the growth factors already present in your blood and reintroducing them to targeted areas, PRP encourages your skin or scalp to repair and renew itself naturally, without introducing any foreign substance.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]">Book Treatment</Link>
-              <a href="https://wa.me/971581867309" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600">Ask a Question</a>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
+              >
+                Book Treatment
+              </Link>
+              <a
+                href="https://wa.me/971581867309"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
+              >
+                Ask a Question
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/* 2. What PRP Can Treat */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <h2 className="mb-10 text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">What PRP Can Treat</h2>
+          <div className="mb-10 max-w-2xl">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              What PRP Can Treat
+            </h2>
+            <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
+              PRP's regenerative effect makes it useful across a surprising range of concerns — not just facial skin quality.
+            </p>
+          </div>
           <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-3">
             {uses.map((u) => (
               <div key={u.title} className="bg-surface p-7">
@@ -60,13 +100,19 @@ export default function PRPPage() {
         </div>
       </section>
 
+      {/* 3. How It Works */}
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-10">
+            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+              How PRP Works
+            </h2>
+          </div>
           <div className="grid gap-10 sm:grid-cols-3">
             {[
-              { num: "1", title: "Blood Draw", body: "A small sample of your blood is taken, similar to a routine blood test." },
-              { num: "2", title: "Preparation", body: "The blood is centrifuged to separate and concentrate the platelet-rich plasma." },
-              { num: "3", title: "Application", body: "The PRP is carefully applied or injected into the targeted treatment area." },
+              { num: "1", title: "Blood Draw", body: "A small blood sample is taken — the same routine process as a standard blood test." },
+              { num: "2", title: "Preparation", body: "Your blood is spun in a centrifuge to separate and concentrate the platelet-rich plasma from the rest of the sample." },
+              { num: "3", title: "Application", body: "The concentrated PRP is precisely applied or injected into the treatment area, activating your body's own repair response." },
             ].map((s) => (
               <div key={s.num} className="border-t border-warm-300 pt-6">
                 <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
@@ -78,19 +124,37 @@ export default function PRPPage() {
         </div>
       </section>
 
+      {/* 4. FAQ Section */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-2xl px-5 sm:px-8 lg:px-12">
           <FAQAccordion items={faqs} title="Frequently Asked Questions" />
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
+      {/* 5. Closing CTA */}
+      <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">Interested in PRP?</h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">Book a consultation to learn if PRP is the right treatment for you.</p>
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
+            Interested in PRP?
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
+            Book a consultation to find out whether PRP is the right regenerative treatment for your goals.
+          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link href="/contact" className="inline-flex items-center rounded-full bg-ink px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-warm-800 active:scale-[0.98]">Book an Appointment</Link>
-            <a href="https://wa.me/971581867309" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600">WhatsApp Us</a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
+            >
+              Book an Appointment
+            </Link>
+            <a
+              href="https://wa.me/971581867309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
+            >
+              WhatsApp Us
+            </a>
           </div>
         </div>
       </section>
