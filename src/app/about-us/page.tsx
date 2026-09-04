@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Visage Polyclinic",
+  title: "About Visage Polyclinic | Aesthetic & Medical Care Dubai",
   description:
-    "Learn about Visage Polyclinic, a multi-speciality medical and aesthetic clinic established in September 2024 in Business Bay, Dubai.",
+    "Visage Polyclinic is a multi-speciality clinic in Business Bay, Dubai, offering aesthetic and general medical care under one roof. Learn our story.",
   openGraph: {
-    title: "About Visage Polyclinic | Business Bay, Dubai",
-    description: "Learn about Visage Polyclinic, a multi-speciality medical and aesthetic clinic established in September 2024 in Business Bay, Dubai.",
+    title: "About Visage Polyclinic | Aesthetic & Medical Care Dubai",
+    description: "Visage Polyclinic is a multi-speciality clinic in Business Bay, Dubai, offering aesthetic and general medical care under one roof. Learn our story.",
     images: [{ url: "https://visagepolyclinic.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai", width: 1200, height: 630 }],
   },
   twitter: {
@@ -31,7 +31,7 @@ export default function AboutPage() {
               <span className="font-display font-normal italic text-brand-500">Visage</span> Polyclinic
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-              A multi-speciality clinic in the heart of Business Bay, Dubai, offering professional medical and aesthetic treatments under one roof.
+              A multi-speciality clinic in the heart of Business Bay, Dubai, built around one idea: aesthetic care and general medicine don't need to live in separate places. At Visage, they sit under one roof, delivered by the same team, to the same standard.
             </p>
           </div>
         </div>
@@ -47,13 +47,13 @@ export default function AboutPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[15px] leading-[1.75] text-warm-600">
                 <p>
-                  Visage Polyclinic was founded with a clear vision: to create a medical clinic where patients receive professional, personalised care in a modern and welcoming environment.
+                  Visage Polyclinic opened with a straightforward goal — build a clinic where patients are treated as individuals, not case numbers, in a space that feels considered rather than clinical-in-the-cold sense of the word.
                 </p>
                 <p>
-                  Located in Regal Tower, Business Bay, Visage brings together aesthetic medicine and general medical services. Our approach is built on the belief that every patient deserves to be treated as an individual.
+                  Based in Regal Tower, Business Bay, Visage combines aesthetic medicine with general medical services. That combination isn't incidental — we believe good care starts with actually knowing the person in front of you, whether they're here for Botox or a check-up.
                 </p>
                 <p>
-                  Professional and clinical where it matters, warm and welcoming where it counts.
+                  The result is a clinic that's professional and precise where precision matters, and genuinely warm everywhere else.
                 </p>
               </div>
             </div>
@@ -79,15 +79,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="mb-14">
             <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              Our philosophy
+              Our Philosophy
             </h2>
           </div>
           <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
             {[
-              { title: "Individual Assessment", body: "Every patient is evaluated on their own terms. We develop treatment plans based on your specific needs, goals, and medical history." },
-              { title: "Professional Standards", body: "We uphold high standards of clinical practice across all services, combining expertise with genuine care." },
-              { title: "Clear Communication", body: "We believe in transparent, honest communication so you can make informed decisions about your treatment." },
-              { title: "Patient Comfort", body: "From the moment you arrive, our environment is designed to feel professional yet welcoming, clinical yet calm." },
+              { title: "Individual Assessment", body: "No two patients get the same plan. We build treatment around your specific needs, goals and medical history — not a standard package." },
+              { title: "Professional Standards", body: "Clinical expertise applied consistently across every service, aesthetic or medical, backed by genuine care rather than a sales-driven approach." },
+              { title: "Clear Communication", body: "You'll always understand what's being recommended and why, so every decision about your care is one you're making with full information." },
+              { title: "Patient Comfort", body: "A space designed to feel calm and welcoming, without losing the clinical precision that a real medical environment requires." },
             ].map((v) => (
               <div key={v.title} className="border-t border-warm-300 pt-6">
                 <h3 className="text-lg font-semibold text-ink">{v.title}</h3>
@@ -104,10 +104,10 @@ export default function AboutPage() {
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-                Multiple specialities, one roof
+                Multiple Specialities, One Roof
               </h2>
               <p className="mt-5 text-[15px] leading-[1.75] text-warm-600">
-                Visage is not purely an aesthetic clinic. We provide a full spectrum of medical services, from general practice and chronic disease management to minor surgery and aesthetic treatments, all in one convenient location.
+                Visage isn't a purely aesthetic clinic. Alongside treatments like Botox, fillers and skin rejuvenation, we provide general practice, chronic disease management, and minor surgery — a full range of medical care, all in one convenient Business Bay location.
               </p>
               <Link
                 href="/aesthetic-treatments"
@@ -136,10 +136,10 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Visit us in Business Bay
+            Visit Us in Business Bay
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
-            Regal Tower, Floor 7, Unit 711. Open daily, 8:00 AM to 11:00 PM.
+            Regal Tower, Floor 7, Unit 711, Business Bay, Dubai. Open daily from 8:00 AM to 11:00 PM.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

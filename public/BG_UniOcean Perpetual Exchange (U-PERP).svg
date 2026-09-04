@@ -1,0 +1,22 @@
+<svg width="1440" height="790" viewBox="0 0 1440 790" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_640_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="790">
+<rect width="1440" height="790" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_640_7)">
+<rect width="1440" height="790" fill="url(#paint0_radial_640_7)"/>
+<g filter="url(#filter0_f_640_7)">
+<ellipse cx="514.5" cy="477.5" rx="308.5" ry="246.5" fill="black"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_640_7" x="-44" y="-19" width="1117" height="993" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_640_7"/>
+</filter>
+<radialGradient id="paint0_radial_640_7" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(475 39.5) rotate(45.8525) scale(475.228 498.144)">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</radialGradient>
+</defs>
+</svg>

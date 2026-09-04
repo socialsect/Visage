@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Dr. Musa",
+  title: "Dr. Musa | Aesthetic Doctor in Dubai | Visage Polyclinic",
   description:
-    "Meet Dr. Musa at Visage Polyclinic, Business Bay, Dubai. Professional medical and aesthetic care.",
+    "Dr. Musa, MBChB, is an aesthetic doctor in Dubai with 17+ years of medical experience. Botox, dermal fillers, and general practice. Book a consultation.",
 };
 
 export default function DoctorPage() {
@@ -37,7 +37,7 @@ export default function DoctorPage() {
                 MBChB &middot; General Practitioner &amp; Aesthetic Medicine
               </p>
               <p className="mt-6 max-w-lg text-[15px] leading-[1.75] text-warm-600">
-                Every patient should be treated as an individual. Care should be professional and personalised. The clinic brings multiple specialities together under one roof to provide comprehensive care.
+                With over 17 years of medical experience, including 9 years practising in the UAE, Dr. Musa brings a physician's grounding to every aesthetic treatment at Visage. Every recommendation starts from the same place: what does this specific patient actually need, not what would a standard protocol suggest.
               </p>
               <Link
                 href="/contact"
@@ -77,8 +77,7 @@ export default function DoctorPage() {
                   Experience
                 </h3>
                 <div className="mt-2 space-y-1">
-                  <p className="text-[14px] text-ink">Over 17 years of medical experience</p>
-                  <p className="text-[14px] text-ink">9 years of practice in the UAE</p>
+                  <p className="text-[14px] text-ink">Over 17 years of medical experience, including 9 years of practice in the UAE.</p>
                 </div>
               </div>
               <div className="border-t border-warm-300 pt-5">
@@ -88,11 +87,11 @@ export default function DoctorPage() {
                 <div className="mt-3 space-y-3">
                   <div>
                     <p className="text-[14px] font-medium text-ink">General Practice</p>
-                    <p className="mt-1 text-[13px] text-warm-600">Acute and chronic disease management (hypertension, diabetes), emergency cases, male health, adolescent health, minor surgeries, referrals, and diagnostic investigations including laboratory and radiological tests.</p>
+                    <p className="mt-1 text-[13px] text-warm-600">Acute and chronic disease management &mdash; including hypertension and diabetes &mdash; alongside emergency cases, male health, adolescent health, minor surgeries, specialist referrals, and diagnostic investigations covering laboratory and radiological testing.</p>
                   </div>
                   <div>
                     <p className="text-[14px] font-medium text-ink">Aesthetic Medicine</p>
-                    <p className="mt-1 text-[13px] text-warm-600">Botox, dermal fillers, skin rejuvenation, PRP, PRF, threads, fat melting, skin boosters, and minor aesthetic procedures.</p>
+                    <p className="mt-1 text-[13px] text-warm-600">Botox, dermal fillers, skin rejuvenation, PRP, PRF, thread lifts, fat melting, skin boosters, and minor aesthetic procedures.</p>
                   </div>
                 </div>
               </div>
@@ -105,10 +104,10 @@ export default function DoctorPage() {
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Schedule a consultation
+            Schedule a Consultation
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] text-warm-600">
-            Book an appointment to discuss your treatment goals with Dr. Musa.
+            Book an appointment to discuss your treatment goals directly with Dr. Musa.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

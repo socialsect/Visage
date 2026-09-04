@@ -3,14 +3,15 @@ import Image from "next/image";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { MapEmbed } from "@/components/MapEmbed";
 import { AskQuestionSection } from "@/components/AskQuestionSection";
+import { MedicalServicesList } from "@/components/MedicalServicesList";
 
 const featuredTreatments = [
-  { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox-dubai", linkText: "Botox Dubai" },
-  { title: "Dermal Fillers", description: "Restore volume, contour the face, and address static wrinkles with precision injectable treatments.", href: "/dermal-fillers-dubai", linkText: "dermal fillers Dubai" },
-  { title: "Skin Rejuvenation", description: "Chemical peels, microneedling, PRP and mesotherapy to improve skin quality and resilience.", href: "/skin-rejuvenation-dubai", linkText: "skin rejuvenation Dubai" },
-  { title: "Threads", description: "Non-surgical lift and skin tightening using dissolvable PDO thread technology.", href: "/thread-lift-dubai", linkText: "PDO thread lift Dubai" },
-  { title: "Fat Melting", description: "Targeted injectable treatment for localised fat reduction without surgery.", href: "/fat-melting-treatment-dubai", linkText: "fat melting treatment Dubai" },
-  { title: "Regenerative Medicine", description: "PRP, PRF, and biostimulators supporting the skin's natural renewal process.", href: "/prp-treatment-dubai", linkText: "PRP treatment Dubai" },
+  { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox-dubai", linkText: "Botox Dubai", icon: "/moisturizing.svg" },
+  { title: "Dermal Fillers", description: "Restore volume, contour the face, and address static wrinkles with precision injectable treatments.", href: "/dermal-fillers-dubai", linkText: "dermal fillers Dubai", icon: "/clear.svg" },
+  { title: "Skin Rejuvenation", description: "Chemical peels, microneedling, PRP and mesotherapy to improve skin quality and resilience.", href: "/skin-rejuvenation-dubai", linkText: "skin rejuvenation Dubai", icon: "/face-care.svg" },
+  { title: "Threads", description: "Non-surgical lift and skin tightening using dissolvable PDO thread technology.", href: "/thread-lift-dubai", linkText: "PDO thread lift Dubai", icon: "/mesotherapy.svg" },
+  { title: "Fat Melting", description: "Targeted injectable treatment for localised fat reduction without surgery.", href: "/fat-melting-treatment-dubai", linkText: "fat melting treatment Dubai", icon: "/slim-body.svg" },
+  { title: "Regenerative Medicine", description: "PRP, PRF, and biostimulators supporting the skin's natural renewal process.", href: "/prp-treatment-dubai", linkText: "PRP treatment Dubai", icon: "/medication-bottle.svg" },
 ];
 
 export default function HomePage() {
@@ -96,25 +97,35 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredTreatments.map((t) => (
               <Link
                 key={t.title}
                 href={t.href}
-                className="group bg-surface p-8 transition-colors duration-200 hover:bg-brand-50"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-warm-200 bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-900/5"
               >
-                <h3 className="text-xl font-semibold text-ink group-hover:text-brand-600 transition-colors">
-                  {t.title}
-                </h3>
-                <p className="mt-3 text-[13px] leading-relaxed text-warm-600">
-                  {t.description}
-                </p>
-                <span className="mt-5 inline-flex items-center text-[12px] font-medium text-brand-500 transition-colors group-hover:text-brand-700">
-                  Learn more
-                  <svg className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                  </svg>
-                </span>
+                <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-[#b79bb9] to-[#997c9b] transition-all duration-500 group-hover:w-full" />
+                <div>
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-brand-50 p-3 transition-colors group-hover:bg-brand-100">
+                    <Image src={t.icon} alt={t.title} width={32} height={32} className="h-full w-full object-contain opacity-80 transition-opacity group-hover:opacity-100" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-ink transition-colors group-hover:text-brand-600">
+                    {t.title}
+                  </h3>
+                  <p className="mt-4 text-[14px] leading-relaxed text-warm-600">
+                    {t.description}
+                  </p>
+                </div>
+                <div className="mt-8 flex items-center justify-between border-t border-warm-100 pt-5">
+                  <span className="inline-flex items-center text-[13px] font-medium text-brand-500 transition-colors group-hover:text-brand-700">
+                    Learn more
+                  </span>
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-50 text-brand-500 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#b79bb9] group-hover:text-white">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
@@ -153,7 +164,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="lg:col-span-7">
-              <div className="relative aspect-[16/10] overflow-hidden bg-warm-200">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[5px] bg-warm-200">
                 <Image
                   src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1000&h=625&fit=crop&crop=center"
                   alt="Aesthetic treatment at Visage Polyclinic"
@@ -172,7 +183,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="order-2 lg:order-1 lg:col-span-7">
-              <div className="relative aspect-[4/3] overflow-hidden bg-warm-200 sm:aspect-[16/10]">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[5px] bg-warm-200 sm:aspect-[16/10]">
                 <Image
                   src="/dr-musa.jpg"
                   alt="Dr. Musa - Dermal filler treatments at Visage Polyclinic"
@@ -229,48 +240,66 @@ export default function HomePage() {
               Alongside aesthetic medicine, Visage Polyclinic is a general medical clinic in Dubai offering everyday healthcare for individuals and families.
             </p>
           </div>
-          <div className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: "General Practice", desc: "Everyday medical care for adults and adolescents — from routine check-ups to ongoing health concerns." },
-              { title: "Chronic Disease Management", desc: "Regular monitoring and long-term care planning for conditions like diabetes and high blood pressure." },
-              { title: "Male Health", desc: "Focused medical care addressing health concerns specific to men, handled with discretion." },
-              { title: "Adolescent Health", desc: "Age-appropriate medical care designed around the needs of younger patients." },
-              { title: "Minor Surgery", desc: "In-clinic procedures such as lipoma and cyst removal, wound closure, and incision and drainage." },
-              { title: "Emergency & Referral", desc: "Prompt attention for urgent issues, with coordinated referrals to specialists when your care needs go beyond the clinic." },
-            ].map((s) => (
-              <div key={s.title}>
-                <h3 className="text-lg font-semibold text-ink">{s.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.desc}</p>
-              </div>
-            ))}
-          </div>
+          <MedicalServicesList />
         </div>
       </section>
 
       {/* ─── Why Visage ─── */}
-      <section className="bg-ink py-20 sm:py-28">
+      <section className="bg-ink py-24 sm:py-32 relative">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-14">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
-              Your Voice
-            </p>
-            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-white">
-              Why <span className="font-display font-normal italic">Visage</span>
-            </h2>
-          </div>
-          <div className="grid gap-px sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Individual Assessment", body: "Your treatment plan starts with you — not a standard package. We assess your anatomy, skin, and goals before recommending anything." },
-              { title: "Professional Standards", body: "Every procedure follows evidence-based clinical protocols, carried out with the rigour you'd expect from a medical practice, not just a beauty clinic." },
-              { title: "Informed Decisions", body: "We explain the \"why\" behind every recommendation, so you're choosing your treatment with full clarity — never pressure." },
-              { title: "Under One Roof", body: "Aesthetic care and general medicine, coordinated by the same team, in the same clinic — no shuttling between providers." },
-            ].map((item) => (
-              <div key={item.title} className="bg-warm-900 p-8">
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 text-[13px] leading-relaxed text-warm-400">{item.body}</p>
+           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+              
+              {/* Sticky Left Column */}
+              <div className="lg:w-1/3">
+                 <div className="sticky top-12 lg:top-32 lg:pr-10 lg:pb-[280px]">
+                   <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-400">
+                     Your Voice
+                   </p>
+                   <h2 className="text-[clamp(2.5rem,4vw,3.5rem)] font-semibold leading-[1.1] tracking-tight text-white mb-6">
+                     Why <br className="hidden lg:block" />
+                     <span className="font-display font-normal italic text-brand-200">Visage</span>
+                   </h2>
+                   <p className="text-warm-400 text-[15px] leading-[1.8] max-w-sm">
+                     We believe in transparent, ethical care where your needs come first. No pressure, no rushed appointments—just expert guidance tailored to you.
+                   </p>
+                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Scrolling Right Column (Stacked Cards) */}
+              <div className="lg:w-2/3 flex flex-col gap-12 sm:gap-20 relative pb-12 lg:pb-32">
+                 {[
+                    { title: "Individual Assessment", body: "Your treatment plan starts with you — not a standard package. We assess your anatomy, skin, and goals before recommending anything." },
+                    { title: "Professional Standards", body: "Every procedure follows evidence-based clinical protocols, carried out with the rigour you'd expect from a medical practice, not just a beauty clinic." },
+                    { title: "Informed Decisions", body: "We explain the \"why\" behind every recommendation, so you're choosing your treatment with full clarity — never pressure." },
+                    { title: "Under One Roof", body: "Aesthetic care and general medicine, coordinated by the same team, in the same clinic — no shuttling between providers." },
+                 ].map((item, index) => (
+                    <div 
+                       key={item.title} 
+                       className="sticky w-full transition-transform"
+                       style={{ top: `calc(128px + ${index * 30}px)` }}
+                    >
+                       <div className="bg-brand-500 rounded-[2rem] p-8 sm:p-12 lg:p-16 border border-white/10 min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
+                          <div className="flex flex-col sm:flex-row gap-8 sm:gap-12">
+                             <span className="text-5xl sm:text-6xl font-bold text-white leading-none">
+                                0{index + 1}
+                             </span>
+                             <div className="mt-1 sm:mt-2">
+                                <h3 className="text-2xl sm:text-3xl font-medium text-white mb-4 sm:mb-5 tracking-tight">
+                                   {item.title}
+                                </h3>
+                                <p className="text-[1rem] sm:text-[1.125rem] leading-[1.8] text-brand-50 max-w-xl">
+                                   {item.body}
+                                </p>
+                             </div>
+                          </div>
+                       </div>
+                       {/* Invisible spacer ensures all cards share the exact same sticky bottom boundary so they scroll up together */}
+                       <div style={{ height: `${(3 - index) * 30}px` }} />
+                    </div>
+                 ))}
+              </div>
+
+           </div>
         </div>
       </section>
 
@@ -341,7 +370,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
-              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden bg-warm-200">
+              <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[5px] bg-warm-200">
                 <Image
                   src="/dr-musa.jpg"
                   alt="Dr. Musa"

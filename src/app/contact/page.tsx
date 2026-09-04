@@ -4,9 +4,9 @@ import { ContactInfo } from "@/components/ContactInfo";
 import { MapEmbed } from "@/components/MapEmbed";
 
 export const metadata: Metadata = {
-  title: "Contact & Book Appointment",
+  title: "Contact Visage Polyclinic | Business Bay, Dubai",
   description:
-    "Contact Visage Polyclinic or book an appointment. Regal Tower, Floor 7, Business Bay, Dubai. Call 04 575 8729 or WhatsApp 058 186 7309.",
+    "Contact Visage Polyclinic in Business Bay, Dubai. Call, WhatsApp or book online — Office 711, Regal Tower. Open daily, 8:00 AM to 11:00 PM.",
 };
 
 export default function ContactPage() {
@@ -23,7 +23,7 @@ export default function ContactPage() {
               Contact &amp; <span className="font-display font-normal italic text-brand-500">Book</span>
             </h1>
             <p className="mt-6 text-[15px] leading-[1.75] text-warm-600">
-              Reach out by phone, WhatsApp, or use the form below to request an appointment.
+              However you'd rather reach us — a call, a WhatsApp message, or the form below — someone from our team will get back to you directly.
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                 Request an Appointment
               </h2>
               <p className="mt-2 text-[14px] text-warm-600">
-                Fill out the form and our team will confirm your appointment.
+                Fill in a few details and our team will confirm your appointment — no back-and-forth phone tag required.
               </p>
               <div className="mt-8">
                 <ContactForm />

@@ -152,7 +152,7 @@ export function ContactForm() {
         Request Appointment
       </button>
       <p className="text-center text-[11px] text-warm-400">
-        Our team will confirm your appointment shortly.
+        Our team typically confirms appointments within one working day.
       </p>
     </form>
   );
