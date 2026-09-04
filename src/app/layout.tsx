@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://visagepolyclinic.com"),
+  metadataBase: new URL("https://visagepolyclinicdubai.com"),
   title: {
     default: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
     template: "%s | Visage Polyclinic",
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
     title: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
     description:
       "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
-    url: "https://visagepolyclinic.com",
+    url: "https://visagepolyclinicdubai.com",
     siteName: "Visage Polyclinic",
     type: "website",
     locale: "en_AE",
     images: [
       {
-        url: "https://visagepolyclinic.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
+        url: "https://visagepolyclinicdubai.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
         width: 1200,
         height: 630,
         alt: "Visage Polyclinic - Medical & Aesthetic Clinic in Business Bay, Dubai",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
     images: [
       {
-        url: "https://visagepolyclinic.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
+        url: "https://visagepolyclinicdubai.com/api/og?title=Visage%20Polyclinic&subtitle=Medical%20%26%20Aesthetic%20Clinic%20%7C%20Business%20Bay%2C%20Dubai",
         width: 1200,
         height: 630,
         alt: "Visage Polyclinic - Medical & Aesthetic Clinic in Business Bay, Dubai",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://visagepolyclinic.com",
+    canonical: "https://visagepolyclinicdubai.com",
   },
   verification: {
     google: "your-google-site-verification", // Replace with actual verification code
@@ -103,7 +103,7 @@ const structuredData = {
   name: "Visage Polyclinic LLC",
   description:
     "Multi-speciality medical and aesthetic clinic offering Botox, fillers, skin treatments, general practice, and minor surgery in Business Bay, Dubai.",
-  url: "https://visagepolyclinic.com",
+  url: "https://visagepolyclinicdubai.com",
   telephone: "+97145758729",
   email: "visagepolyclinicllc@gmail.com",
   address: {

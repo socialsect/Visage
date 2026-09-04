@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Visage Polyclinic | Aesthetic & Medical Care Dubai",
     description: "Visage Polyclinic is a multi-speciality clinic in Business Bay, Dubai, offering aesthetic and general medical care under one roof. Learn our story.",
-    images: [{ url: "https://visagepolyclinic.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai", width: 1200, height: 630 }],
+    images: [{ url: "https://visagepolyclinicdubai.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://visagepolyclinic.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai"],
+    images: ["https://visagepolyclinicdubai.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai"],
   },
 };
 

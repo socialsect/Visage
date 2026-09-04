@@ -104,7 +104,7 @@ export async function GET(request: Request) {
               color: "#a9a29c",
             }}
           >
-            visagepolyclinic.com
+            visagepolyclinicdubai.com
           </span>
           <span
             style={{
