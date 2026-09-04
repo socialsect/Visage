@@ -5,6 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "noreply@updates.visagepolyclinicdubai.com";
 const NOTIFY_EMAIL = process.env.RESEND_NOTIFY_EMAILS || "vinayakxsingh21@gmail.com";
 const CC_EMAIL = process.env.RESEND_CC_EMAILS || "";
+const BCC_EMAIL = process.env.RESEND_BCC_EMAILS || "";
 
 function escapeHtml(value: string) {
   return value
@@ -68,11 +69,13 @@ export async function sendContactNotification(data: {
 
   const toList = CC_EMAIL ? [NOTIFY_EMAIL] : [NOTIFY_EMAIL];
   const ccList = CC_EMAIL ? [CC_EMAIL] : [];
+  const bccList = BCC_EMAIL ? [BCC_EMAIL] : [];
 
   return resend.emails.send({
     from: FROM_EMAIL,
     to: toList,
     cc: ccList.length ? ccList : undefined,
+    bcc: bccList.length ? bccList : undefined,
     subject: `New Enquiry from ${data.name}`,
     html,
     replyTo: data.email,
@@ -170,11 +173,13 @@ export async function sendQuestionNotification(data: {
 
   const toList = CC_EMAIL ? [NOTIFY_EMAIL] : [NOTIFY_EMAIL];
   const ccList = CC_EMAIL ? [CC_EMAIL] : [];
+  const bccList = BCC_EMAIL ? [BCC_EMAIL] : [];
 
   return resend.emails.send({
     from: FROM_EMAIL,
     to: toList,
     cc: ccList.length ? ccList : undefined,
+    bcc: bccList.length ? bccList : undefined,
     subject: `New Question from ${fullName}`,
     html,
     replyTo: data.email,
