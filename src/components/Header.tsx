@@ -166,9 +166,12 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="border-t border-warm-200 bg-white lg:hidden">
-          <nav className="mx-auto max-w-[1400px] px-5 py-6 sm:px-8">
+      <div
+        className={`absolute left-0 right-0 border-t border-warm-200 bg-white shadow-lg lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+          isOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="mx-auto max-w-[1400px] px-5 py-6 sm:px-8">
             <div className="space-y-1">
               {navLinks.map((link) =>
                 link.children ? (
@@ -250,7 +253,6 @@ export function Header() {
             </div>
           </nav>
         </div>
-      )}
     </header>
   );
 }

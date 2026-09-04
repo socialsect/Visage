@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 
 const testimonials = [
   {
@@ -14,7 +14,7 @@ const testimonials = [
     service: "Dermal Fillers"
   },
   {
-    text: "I’ve been to several clinics in Dubai, but Visage Polyclinic is by far the best. The level of professionalism and care here is unmatched. My skin has never looked better.",
+    text: "I've been to several clinics in Dubai, but Visage Polyclinic is by far the best. The level of professionalism and care here is unmatched. My skin has never looked better.",
     name: "Elena R.",
     service: "Skin Boosters"
   },
@@ -37,18 +37,46 @@ const testimonials = [
 
 export function TestimonialCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const getVisibleCount = useCallback(() => {
+    if (typeof window === "undefined") return 3;
+    if (window.innerWidth < 640) return 1;
+    if (window.innerWidth < 1024) return 2;
+    return 3;
+  }, []);
+
+  const totalDots = Math.max(1, testimonials.length - visibleCount + 1);
+
+  const updateActiveIndex = useCallback(() => {
+    if (!scrollRef.current) return;
+    const { scrollLeft } = scrollRef.current;
+    const cardEl = scrollRef.current.firstElementChild?.nextElementSibling as HTMLElement;
+    if (!cardEl) return;
+    const cardWidth = cardEl.offsetWidth + 24;
+    const index = Math.round(scrollLeft / cardWidth);
+    setActiveIndex(Math.min(index, totalDots - 1));
+  }, [totalDots]);
+
+  const scrollToIndex = useCallback((index: number) => {
+    if (!scrollRef.current) return;
+    const cardEl = scrollRef.current.firstElementChild?.nextElementSibling as HTMLElement;
+    if (!cardEl) return;
+    const cardWidth = cardEl.offsetWidth + 24;
+    scrollRef.current.scrollTo({ left: index * cardWidth, behavior: "smooth" });
+  }, []);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const itemElement = scrollRef.current.firstElementChild?.nextElementSibling as HTMLElement;
-      let scrollAmount = 300; 
+      let scrollAmount = 300;
       if (itemElement) {
-        scrollAmount = itemElement.offsetWidth + 24; 
+        scrollAmount = itemElement.offsetWidth + 24;
       }
-      
+
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
 
-      // Handle looping when going right
       if (direction === "right" && scrollLeft + clientWidth >= scrollWidth - 10) {
         scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
         return;
@@ -62,8 +90,21 @@ export function TestimonialCarousel() {
   };
 
   useEffect(() => {
+    const handleResize = () => setVisibleCount(getVisibleCount());
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [getVisibleCount]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateActiveIndex, { passive: true });
+    return () => el.removeEventListener("scroll", updateActiveIndex);
+  }, [updateActiveIndex]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
-      // Only auto-scroll on desktop (tailwind lg breakpoint is usually 1024px)
       if (window.innerWidth >= 1024 && scrollRef.current) {
         scroll("right");
       }
@@ -76,7 +117,7 @@ export function TestimonialCarousel() {
     <div className="relative">
       {/* Navigation Buttons */}
       <div className="absolute right-0 top-[-70px] hidden sm:flex gap-3">
-        <button 
+        <button
           onClick={() => scroll("left")}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-warm-300 bg-surface text-ink transition-colors hover:bg-warm-200 active:scale-95"
           aria-label="Previous testimonials"
@@ -85,7 +126,7 @@ export function TestimonialCarousel() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button 
+        <button
           onClick={() => scroll("right")}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-warm-300 bg-surface text-ink transition-colors hover:bg-warm-200 active:scale-95"
           aria-label="Next testimonials"
@@ -96,15 +137,15 @@ export function TestimonialCarousel() {
         </button>
       </div>
 
-      <div 
+      <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8" 
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         <style dangerouslySetInnerHTML={{__html: `\n          .flex::-webkit-scrollbar { display: none; }\n        `}} />
         {testimonials.map((testimonial, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className="w-[85vw] sm:w-[45vw] lg:w-[calc(33.333%_-_16px)] flex-none snap-start border border-warm-300 bg-surface p-8 rounded-2xl flex flex-col justify-between transition-colors hover:border-[#b79bb9]"
           >
             <div>
@@ -122,6 +163,22 @@ export function TestimonialCarousel() {
               <p className="text-[11px] uppercase tracking-[0.1em] text-brand-500 mt-1">{testimonial.service}</p>
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Pagination Dots */}
+      <div className="flex items-center justify-center gap-2 mt-2">
+        {Array.from({ length: totalDots }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => scrollToIndex(i)}
+            aria-label={`Go to testimonial ${i + 1}`}
+            className={`rounded-full transition-all duration-300 ${
+              i === activeIndex
+                ? "h-2.5 w-2.5 bg-[#b79bb9]"
+                : "h-2 w-2 bg-warm-300 hover:bg-warm-400"
+            }`}
+          />
         ))}
       </div>
     </div>

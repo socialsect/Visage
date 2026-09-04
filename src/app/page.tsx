@@ -422,14 +422,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Location & CTA ─── */}
+      {/* ─── Ask A Question ─── */}
+      <AskQuestionSection />
+
+      {/* ─── Location & Consultation ─── */}
       <section className="bg-surface-alt py-20 sm:py-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-                Find us in<br />Business Bay
+                Begin your <span className="font-display font-normal italic text-brand-500">consultation</span>
               </h2>
+              <p className="mt-5 max-w-md text-[15px] leading-relaxed text-warm-600">
+                Visit us in Business Bay or get in touch to schedule an appointment. We look forward to welcoming you.
+              </p>
               <div className="mt-6 space-y-3 text-[14px] leading-relaxed text-warm-600">
                 <p>Office 711, Regal Tower<br />Business Bay, Dubai<br />United Arab Emirates</p>
                 <p className="text-warm-500">Open daily, 8:00 AM to 11:00 PM</p>
@@ -442,47 +448,18 @@ export default function HomePage() {
                   Book an Appointment
                 </Link>
                 <a
-                  href="tel:+97145758729"
+                  href="https://wa.me/971581867309"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
                 >
-                  04 575 8729
+                  WhatsApp Us
                 </a>
               </div>
             </div>
             <div className="lg:col-span-7">
               <MapEmbed />
             </div>
-          </div>
-        </div>
-      </section>
-      <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
-
-      {/* ─── Ask A Question ─── */}
-      <AskQuestionSection />
-      {/* ─── Final CTA ─── */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-            Begin your <span className="font-display font-normal italic text-brand-500">consultation</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-warm-600">
-            Contact us to schedule an appointment. We look forward to welcoming you.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-full bg-[#b79bb9] px-7 py-3 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
-            >
-              Book an Appointment
-            </Link>
-            <a
-              href="https://wa.me/971581867309"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-warm-300 px-6 py-3 text-[13px] font-medium text-warm-700 transition-colors hover:border-brand-300 hover:text-brand-600"
-            >
-              WhatsApp Us
-            </a>
           </div>
         </div>
       </section>
