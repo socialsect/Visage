@@ -4,12 +4,46 @@ import { useState } from "react";
 
 export function AskQuestionSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/ask-question", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          question: formData.get("question"),
+          pageUrl: window.location.href,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to submit");
+
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <section className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-start">
-          
+
           {/* Left Column */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-4 mb-5">
@@ -18,17 +52,16 @@ export function AskQuestionSection() {
                 Ask a Question
               </p>
             </div>
-            
+
             <h2 className="text-[clamp(2rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
               Not Sure Where<br />to Start? Just Ask.
             </h2>
-            
+
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-warm-600">
-              Not sure which treatment fits your situation? Describe what's on your mind, and we'll guide you to the right next step. No pressure, no commitment.
+              Not sure which treatment fits your situation? Describe what&apos;s on your mind, and we&apos;ll guide you to the right next step. No pressure, no commitment.
             </p>
 
             <div className="mt-12 space-y-8">
-              {/* Feature 1 */}
               <div className="flex gap-4">
                 <div className="mt-0.5 flex-shrink-0 text-brand-500">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -37,11 +70,10 @@ export function AskQuestionSection() {
                 </div>
                 <div>
                   <h4 className="text-[14px] font-semibold text-ink">Kept private</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes straight to Dr Musa's team and isn't shared beyond the clinic.</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Your message goes straight to Dr Musa&apos;s team and isn&apos;t shared beyond the clinic.</p>
                 </div>
               </div>
 
-              {/* Feature 2 */}
               <div className="flex gap-4">
                 <div className="mt-0.5 flex-shrink-0 text-brand-500">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -54,7 +86,6 @@ export function AskQuestionSection() {
                 </div>
               </div>
 
-              {/* Feature 3 */}
               <div className="flex gap-4">
                 <div className="mt-0.5 flex-shrink-0 text-brand-500">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -63,7 +94,7 @@ export function AskQuestionSection() {
                 </div>
                 <div>
                   <h4 className="text-[14px] font-semibold text-ink">Zero obligation</h4>
-                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Reaching out doesn't commit you to booking anything.</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-warm-600">Reaching out doesn&apos;t commit you to booking anything.</p>
                 </div>
               </div>
             </div>
@@ -86,13 +117,7 @@ export function AskQuestionSection() {
                   </button>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSubmitted(true);
-                  }}
-                  className="space-y-6"
-                >
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label htmlFor="firstName" className="block text-[12px] font-medium text-warm-700 mb-2">
@@ -101,6 +126,7 @@ export function AskQuestionSection() {
                       <input
                         type="text"
                         id="firstName"
+                        name="firstName"
                         required
                         className="block w-full rounded-lg border border-warm-200 bg-transparent px-4 py-3 text-[13px] text-ink placeholder:text-warm-400 transition-colors focus:border-brand-400 focus:outline-none"
                         placeholder="Jane"
@@ -113,6 +139,7 @@ export function AskQuestionSection() {
                       <input
                         type="text"
                         id="lastName"
+                        name="lastName"
                         required
                         className="block w-full rounded-lg border border-warm-200 bg-transparent px-4 py-3 text-[13px] text-ink placeholder:text-warm-400 transition-colors focus:border-brand-400 focus:outline-none"
                         placeholder="Smith"
@@ -128,6 +155,7 @@ export function AskQuestionSection() {
                       <input
                         type="email"
                         id="askEmail"
+                        name="email"
                         required
                         className="block w-full rounded-lg border border-warm-200 bg-transparent px-4 py-3 text-[13px] text-ink placeholder:text-warm-400 transition-colors focus:border-brand-400 focus:outline-none"
                         placeholder="you@example.com"
@@ -140,6 +168,7 @@ export function AskQuestionSection() {
                       <input
                         type="tel"
                         id="askPhone"
+                        name="phone"
                         className="block w-full rounded-lg border border-warm-200 bg-transparent px-4 py-3 text-[13px] text-ink placeholder:text-warm-400 transition-colors focus:border-brand-400 focus:outline-none"
                         placeholder="+971 50 000 0000"
                       />
@@ -152,6 +181,7 @@ export function AskQuestionSection() {
                     </label>
                     <textarea
                       id="question"
+                      name="question"
                       required
                       rows={5}
                       className="block w-full resize-none rounded-lg border border-warm-200 bg-transparent px-4 py-3 text-[13px] text-ink placeholder:text-warm-400 transition-colors focus:border-brand-400 focus:outline-none"
@@ -159,11 +189,16 @@ export function AskQuestionSection() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-[13px] text-red-500">{error}</p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-[#b79bb9] px-6 py-4 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98]"
+                    disabled={loading}
+                    className="w-full rounded-xl bg-[#b79bb9] px-6 py-4 text-[13px] font-medium text-white transition-all duration-200 hover:bg-[#997c9b] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send My Question
+                    {loading ? "Sending..." : "Send My Question"}
                   </button>
                 </form>
               )}

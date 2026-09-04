@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { sanity } from "@/lib/sanity";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Health Insights & Blog",
@@ -8,37 +11,37 @@ export const metadata: Metadata = {
     "Read the latest health insights, medical advice, and aesthetic treatment guides from Visage Polyclinic, Business Bay, Dubai.",
 };
 
-const blogs = [
-  {
-    slug: "botox-everything-you-need-to-know",
-    title: "Botox: Everything You Need to Know Before Your First Treatment",
-    excerpt: "Botox is one of the most popular non-surgical aesthetic treatments worldwide. If you are considering Botox for the first time, here is what you should know about the procedure, what to expect, and how to prepare.",
-    date: "August 2026",
-    readTime: "5 min read",
-    category: "Aesthetic Medicine",
-    image: "/hero-image.jpg",
-  },
-  {
-    slug: "skincare-routine-dubai-climate",
-    title: "How to Adapt Your Skincare Routine for Dubai's Climate",
-    excerpt: "Dubai's intense heat, humidity, and year-round sun exposure can take a toll on your skin. A dermatologist-recommended approach to protecting and nourishing your skin in the UAE climate.",
-    date: "August 2026",
-    readTime: "4 min read",
-    category: "Skin Health",
-    image: "/dr-musa.jpg",
-  },
-  {
-    slug: "when-to-see-general-practitioner",
-    title: "When Should You See a General Practitioner? A Practical Guide",
-    excerpt: "Many people delay visiting a doctor until symptoms become severe. Knowing when to seek medical attention can prevent minor issues from developing into more serious conditions.",
-    date: "July 2026",
-    readTime: "4 min read",
-    category: "General Health",
-    image: "/hero-image.jpg",
-  },
-];
+const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
+  "slug": slug.current,
+  title,
+  excerpt,
+  readingTime,
+  "image": featuredImage.asset->url,
+  "imageAlt": featuredImageAlt,
+  "category": category->title,
+  publishedAt,
+}`;
 
-export default function PublicationsPage() {
+type Post = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  readingTime: string;
+  image: string;
+  imageAlt: string;
+  category: string;
+  publishedAt: string;
+};
+
+function formatDate(dateStr: string) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  return d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+
+export default async function PublicationsPage() {
+  const posts: Post[] = await sanity.fetch(POSTS_QUERY);
+
   return (
     <>
       <section className="py-20 sm:py-28 lg:py-32">
@@ -57,44 +60,56 @@ export default function PublicationsPage() {
 
       <section className="pb-20 sm:pb-28">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {blogs.map((blog) => (
-              <Link
-                key={blog.slug}
-                href={`/publications/${blog.slug}`}
-                className="group"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-warm-200">
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-500">{blog.category}</span>
-                    <span className="text-[11px] text-warm-400">&middot;</span>
-                    <span className="text-[11px] text-warm-400">{blog.readTime}</span>
+          {posts.length === 0 ? (
+            <p className="text-center text-[15px] text-warm-500">No articles yet. Check back soon.</p>
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/publications/${post.slug}`}
+                  className="group"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-warm-200">
+                    <Image
+                      src={post.image || "/hero-image.jpg"}
+                      alt={post.imageAlt || post.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <h2 className="mt-2 text-[16px] font-semibold leading-snug text-ink group-hover:text-brand-600 transition-colors">
-                    {blog.title}
-                  </h2>
-                  <p className="mt-2 text-[13px] leading-relaxed text-warm-500 line-clamp-3">
-                    {blog.excerpt}
-                  </p>
-                  <span className="mt-3 inline-flex items-center text-[12px] font-medium text-brand-500 group-hover:text-brand-700">
-                    Read more
-                    <svg className="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+                  <div className="mt-4">
+                    <div className="flex items-center gap-3">
+                      {post.category && (
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-brand-500">{post.category}</span>
+                      )}
+                      {post.category && post.readingTime && (
+                        <span className="text-[11px] text-warm-400">&middot;</span>
+                      )}
+                      {post.readingTime && (
+                        <span className="text-[11px] text-warm-400">{post.readingTime}</span>
+                      )}
+                    </div>
+                    <h2 className="mt-2 text-[16px] font-semibold leading-snug text-ink group-hover:text-brand-600 transition-colors">
+                      {post.title}
+                    </h2>
+                    {post.excerpt && (
+                      <p className="mt-2 text-[13px] leading-relaxed text-warm-500 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    )}
+                    <span className="mt-3 inline-flex items-center text-[12px] font-medium text-brand-500 group-hover:text-brand-700">
+                      Read more
+                      <svg className="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
