@@ -75,23 +75,80 @@ export default function AboutPage() {
       <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
 
       {/* Values */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-14">
-            <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+      <section className="py-20 sm:py-28 relative overflow-hidden bg-surface-alt">
+        {/* Abstract background elements */}
+        <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-brand-100/40 blur-[100px] pointer-events-none" />
+        <div className="absolute top-[40%] -right-[10%] w-[40%] h-[40%] rounded-full bg-brand-200/20 blur-[100px] pointer-events-none" />
+        
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12 relative z-10">
+          <div className="mb-16 max-w-2xl">
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1.1] tracking-tight text-ink">
               Our Philosophy
             </h2>
+            <p className="mt-6 text-[16px] leading-[1.7] text-warm-600">
+              The principles that guide our approach to care, ensuring every patient feels seen, heard, and supported throughout their journey with us.
+            </p>
           </div>
-          <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
             {[
-              { title: "Individual Assessment", body: "No two patients get the same plan. We build treatment around your specific needs, goals and medical history — not a standard package." },
-              { title: "Professional Standards", body: "Clinical expertise applied consistently across every service, aesthetic or medical, backed by genuine care rather than a sales-driven approach." },
-              { title: "Clear Communication", body: "You'll always understand what's being recommended and why, so every decision about your care is one you're making with full information." },
-              { title: "Patient Comfort", body: "A space designed to feel calm and welcoming, without losing the clinical precision that a real medical environment requires." },
+              { 
+                title: "Individual Assessment", 
+                body: "No two patients get the same plan. We build treatment around your specific needs, goals and medical history — not a standard package.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                  </svg>
+                )
+              },
+              { 
+                title: "Professional Standards", 
+                body: "Clinical expertise applied consistently across every service, aesthetic or medical, backed by genuine care rather than a sales-driven approach.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                  </svg>
+                )
+              },
+              { 
+                title: "Clear Communication", 
+                body: "You'll always understand what's being recommended and why, so every decision about your care is one you're making with full information.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                  </svg>
+                )
+              },
+              { 
+                title: "Patient Comfort", 
+                body: "A space designed to feel calm and welcoming, without losing the clinical precision that a real medical environment requires.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                )
+              },
             ].map((v) => (
-              <div key={v.title} className="border-t border-warm-300 pt-6">
-                <h3 className="text-lg font-semibold text-ink">{v.title}</h3>
-                <p className="mt-3 text-[14px] leading-relaxed text-warm-600">{v.body}</p>
+              <div 
+                key={v.title} 
+                className="group relative overflow-hidden rounded-3xl bg-surface p-8 sm:p-10 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border border-warm-200 hover:border-brand-300"
+              >
+                {/* Glow behind icon */}
+                <div className="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-brand-100/50 blur-2xl transition-all duration-500 group-hover:bg-brand-200/60 group-hover:scale-150" />
+                
+                {/* Icon Container */}
+                <div className="relative mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-all duration-500 group-hover:bg-brand-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-3 shadow-sm group-hover:shadow-md">
+                  {v.icon}
+                </div>
+                
+                {/* Content */}
+                <div className="relative">
+                  <h3 className="text-xl font-semibold text-ink transition-colors duration-300 group-hover:text-brand-900">
+                    {v.title}
+                  </h3>
+                  <p className="mt-4 text-[15px] leading-relaxed text-warm-600 transition-colors duration-300 group-hover:text-warm-800">
+                    {v.body}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
