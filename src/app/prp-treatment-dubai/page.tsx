@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
+import InteractiveStepsList from "@/components/InteractiveStepsList";
 
 export const metadata: Metadata = {
   title: "PRP Treatment Dubai | Platelet-Rich Plasma Therapy",
@@ -87,28 +88,14 @@ export default function PRPPage() {
       />
 
       {/* 3. How It Works */}
-      <section className="bg-surface-alt py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              How PRP Works
-            </h2>
-          </div>
-          <div className="grid gap-10 sm:grid-cols-3">
-            {[
-              { num: "1", title: "Blood Draw", body: "A small blood sample is taken — the same routine process as a standard blood test." },
-              { num: "2", title: "Preparation", body: "Your blood is spun in a centrifuge to separate and concentrate the platelet-rich plasma from the rest of the sample." },
-              { num: "3", title: "Application", body: "The concentrated PRP is precisely applied or injected into the treatment area, activating your body's own repair response." },
-            ].map((s) => (
-              <div key={s.num} className="border-t border-warm-300 pt-6">
-                <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
-                <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <InteractiveStepsList 
+        title="How PRP Works"
+        steps={[
+          { num: "1", title: "Blood Draw", body: "A small blood sample is taken — the same routine process as a standard blood test." },
+          { num: "2", title: "Preparation", body: "Your blood is spun in a centrifuge to separate and concentrate the platelet-rich plasma from the rest of the sample." },
+          { num: "3", title: "Application", body: "The concentrated PRP is precisely applied or injected into the treatment area, activating your body's own repair response." },
+        ]}
+      />
 
       {/* 4. FAQ Section */}
       <section className="py-20 sm:py-28">

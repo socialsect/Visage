@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
+import InteractiveStepsList from "@/components/InteractiveStepsList";
 
 export const metadata: Metadata = {
   title: "Dermal Fillers Dubai | Facial Contouring at Visage Polyclinic",
@@ -188,28 +189,15 @@ export default function FillersPage() {
       />
 
       {/* 6. "What to Expect" Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              What to Expect
-            </h2>
-          </div>
-          <div className="grid gap-10 sm:grid-cols-3">
-            {[
-              { num: "1", title: "Consultation", body: "We discuss your goals, walk through the right options for your face, and build a plan you actually understand before booking treatment." },
-              { num: "2", title: "Treatment", body: "Precise filler placement using fine needles or cannulas. Timing varies depending on the area and product used." },
-              { num: "3", title: "Results", body: "Volume is visible immediately, though some initial swelling is normal and typically settles within a few days." },
-            ].map((s) => (
-              <div key={s.num} className="border-t border-warm-300 pt-6">
-                <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
-                <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <InteractiveStepsList 
+        title="What to Expect"
+        className="py-20 sm:py-28"
+        steps={[
+          { num: "1", title: "Consultation", body: "We discuss your goals, walk through the right options for your face, and build a plan you actually understand before booking treatment." },
+          { num: "2", title: "Treatment", body: "Precise filler placement using fine needles or cannulas. Timing varies depending on the area and product used." },
+          { num: "3", title: "Results", body: "Volume is visible immediately, though some initial swelling is normal and typically settles within a few days." },
+        ]}
+      />
 
       {/* 7. FAQ Section */}
       <section className="bg-surface-alt py-20 sm:py-28">

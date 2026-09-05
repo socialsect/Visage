@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
+import InteractiveStepsList from "@/components/InteractiveStepsList";
 
 export const metadata: Metadata = {
   title: "Skin Rejuvenation Dubai | Chemical Peels, Microneedling",
@@ -86,28 +87,14 @@ export default function SkinRejuvenationPage() {
       />
 
       {/* 3. What to Expect */}
-      <section className="bg-surface-alt py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              What to Expect
-            </h2>
-          </div>
-          <div className="grid gap-10 sm:grid-cols-3">
-            {[
-              { num: "1", title: "Consultation", body: "We look at your skin concerns directly and build a plan around them — not a generic package applied to everyone." },
-              { num: "2", title: "Treatment", body: "Each procedure is carried out with clinical precision, matched to the treatment type and your skin's sensitivity." },
-              { num: "3", title: "Results", body: "Improvement builds gradually as your skin responds over the following weeks — this is a renewal process, not an overnight fix." },
-            ].map((s) => (
-              <div key={s.num} className="border-t border-warm-300 pt-6">
-                <span className="text-2xl font-semibold text-brand-400">{s.num}</span>
-                <h3 className="mt-3 text-lg font-semibold text-ink">{s.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{s.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <InteractiveStepsList 
+        title="What to Expect"
+        steps={[
+          { num: "1", title: "Consultation", body: "We look at your skin concerns directly and build a plan around them — not a generic package applied to everyone." },
+          { num: "2", title: "Treatment", body: "Each procedure is carried out with clinical precision, matched to the treatment type and your skin's sensitivity." },
+          { num: "3", title: "Results", body: "Improvement builds gradually as your skin responds over the following weeks — this is a renewal process, not an overnight fix." },
+        ]}
+      />
 
       {/* 4. FAQ Section */}
       <section className="py-20 sm:py-28">
