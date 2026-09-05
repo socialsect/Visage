@@ -190,16 +190,24 @@ export default function BotoxPage() {
       />
 
       {/* 6. "Post-Treatment Guidelines" Section */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-28 relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 bg-surface-alt/50 -z-10" />
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-brand-100/50 blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-brand-100/30 blur-3xl -z-10" />
+
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl">
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
               Post-Treatment Guidelines
             </h2>
             <p className="mt-3 text-[14px] text-warm-600">
               For the first four hours after treatment:
             </p>
-            <div className="mt-6 space-y-2">
+          </div>
+          
+          <div className="mx-auto mt-12 max-w-4xl">
+            <div className="grid gap-4 sm:grid-cols-2">
               {[
                 "Skip strenuous exercise",
                 "Don't massage or rub the treated area",
@@ -209,11 +217,21 @@ export default function BotoxPage() {
                 "Avoid bending your head downward (for facial treatments)",
                 "Skip cooking or activities involving heat exposure to the face"
               ].map((item) => (
-                <div key={item} className="flex items-center gap-3 border-b border-warm-200 py-3">
-                  <svg className="h-3.5 w-3.5 flex-shrink-0 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  <span className="text-[13px] text-warm-700">{item}</span>
+                <div 
+                  key={item} 
+                  className="group relative overflow-hidden rounded-2xl bg-surface border border-warm-200 p-5 transition-all duration-300 hover:shadow-xl hover:border-brand-300 hover:-translate-y-1 cursor-default"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="relative z-10 flex items-center gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-alt border border-warm-200 text-brand-400 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:border-brand-500 group-hover:shadow-md">
+                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </div>
+                    <span className="text-[14px] font-medium leading-tight text-ink group-hover:text-brand-900 transition-colors duration-300">
+                      {item}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
