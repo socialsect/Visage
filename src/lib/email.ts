@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy");
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "noreply@updates.visagepolyclinicdubai.com";
 const NOTIFY_EMAIL = process.env.RESEND_NOTIFY_EMAILS || "vinayakxsingh21@gmail.com";

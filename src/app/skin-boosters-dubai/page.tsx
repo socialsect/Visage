@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import FeatureGrid from "@/components/FeatureGrid";
 
 export const metadata: Metadata = {
   title: "Skin Boosters Dubai | Injectable Hydration Therapy",
@@ -76,26 +77,11 @@ export default function SkinBoostersPage() {
       </section>
 
       {/* 2. Available Treatments Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10 max-w-2xl">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              Available Treatments
-            </h2>
-            <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
-              Skin boosters aren't one formula — the right approach depends on whether your skin needs hydration, brightening, or a broader anti-ageing boost.
-            </p>
-          </div>
-          <div className="grid gap-px bg-warm-300 sm:grid-cols-2">
-            {treatments.map((t) => (
-              <div key={t.title} className="bg-surface p-7">
-                <h3 className="text-[14px] font-semibold text-ink">{t.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{t.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureGrid 
+        title="Available Treatments" 
+        description="Skin boosters aren't one formula — the right approach depends on whether your skin needs hydration, brightening, or a broader anti-ageing boost." 
+        items={treatments} 
+      />
 
       {/* 3. FAQ Section */}
       <section className="bg-surface-alt py-20 sm:py-28">

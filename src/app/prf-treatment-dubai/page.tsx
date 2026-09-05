@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import FeatureGrid from "@/components/FeatureGrid";
 
 export const metadata: Metadata = {
   title: "PRF Treatment Dubai | Platelet-Rich Fibrin Therapy",
@@ -78,26 +79,11 @@ export default function PRFPage() {
       </section>
 
       {/* 2. What PRF Can Treat */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10 max-w-2xl">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              What PRF Can Treat
-            </h2>
-            <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
-              PRF's slow-release mechanism makes it particularly effective for concerns that benefit from sustained, gradual improvement.
-            </p>
-          </div>
-          <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-3">
-            {uses.map((u) => (
-              <div key={u.title} className="bg-surface p-7">
-                <h3 className="text-[14px] font-semibold text-ink">{u.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-warm-600">{u.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureGrid 
+        title="What PRF Can Treat" 
+        description="PRF's slow-release mechanism makes it particularly effective for concerns that benefit from sustained, gradual improvement." 
+        items={uses} 
+      />
 
       {/* 3. FAQ Section */}
       <section className="bg-surface-alt py-20 sm:py-28">

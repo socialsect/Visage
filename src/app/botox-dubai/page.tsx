@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import FeatureGrid from "@/components/FeatureGrid";
 
 export const metadata: Metadata = {
   title: "Botox Dubai | Anti-Wrinkle Treatment at Visage Polyclinic",
@@ -170,26 +171,11 @@ export default function BotoxPage() {
       </section>
 
       {/* 4. Treatment Areas Section */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          <div className="mb-10 max-w-2xl">
-            <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-semibold leading-[1.15] tracking-tight text-ink">
-              Treatment Areas
-            </h2>
-            <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
-              Botox isn't a single, generic injection pattern — treatment is customised by area, depending on your muscle activity and goals.
-            </p>
-          </div>
-          <div className="grid gap-px bg-warm-300 sm:grid-cols-2 lg:grid-cols-4">
-            {areas.map((a) => (
-              <div key={a.title} className="bg-surface p-6">
-                <h3 className="text-[14px] font-semibold text-ink">{a.title}</h3>
-                <p className="mt-2 text-[12px] leading-relaxed text-warm-600">{a.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureGrid 
+        title="Treatment Areas" 
+        description="Botox isn't a single, generic injection pattern — treatment is customised by area, depending on your muscle activity and goals." 
+        items={areas} 
+      />
 
       {/* 5. "What to Expect" Section */}
       <section className="bg-surface-alt py-20 sm:py-28">
