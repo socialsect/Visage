@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
-import InteractiveStepsList from "@/components/InteractiveStepsList";
+import InteractiveProcess from "@/components/InteractiveProcess";
 
 export const metadata: Metadata = {
   title: "Botox Dubai | Anti-Wrinkle Treatment at Visage Polyclinic",
@@ -179,12 +179,13 @@ export default function BotoxPage() {
       />
 
       {/* 5. "What to Expect" Section */}
-      <InteractiveStepsList 
+      <InteractiveProcess 
         title="What to Expect"
+        className="bg-surface-alt py-20 sm:py-28"
         steps={[
-          { num: "1", title: "Consultation", body: "We talk through your goals, medical history and facial movement before recommending anything — no treatment is booked on the spot." },
-          { num: "2", title: "Treatment", body: "A short, precise procedure using a fine needle. Most patients describe mild discomfort, comparable to a quick pinch." },
-          { num: "3", title: "Aftercare", body: "Clear aftercare instructions to follow for the first few hours. Full results develop gradually over the following one to two weeks." },
+          { title: "Consultation", desc: "We talk through your goals, medical history and facial movement before recommending anything — no treatment is booked on the spot." },
+          { title: "Treatment", desc: "A short, precise procedure using a fine needle. Most patients describe mild discomfort, comparable to a quick pinch." },
+          { title: "Aftercare", desc: "Clear aftercare instructions to follow for the first few hours. Full results develop gradually over the following one to two weeks." },
         ]}
       />
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
-import InteractiveStepsList from "@/components/InteractiveStepsList";
+import InteractiveProcess from "@/components/InteractiveProcess";
 
 export const metadata: Metadata = {
   title: "PRP Treatment Dubai | Platelet-Rich Plasma Therapy",
@@ -88,12 +88,13 @@ export default function PRPPage() {
       />
 
       {/* 3. How It Works */}
-      <InteractiveStepsList 
+      <InteractiveProcess 
         title="How PRP Works"
+        className="bg-surface-alt py-20 sm:py-28"
         steps={[
-          { num: "1", title: "Blood Draw", body: "A small blood sample is taken — the same routine process as a standard blood test." },
-          { num: "2", title: "Preparation", body: "Your blood is spun in a centrifuge to separate and concentrate the platelet-rich plasma from the rest of the sample." },
-          { num: "3", title: "Application", body: "The concentrated PRP is precisely applied or injected into the treatment area, activating your body's own repair response." },
+          { title: "Blood Draw", desc: "A small blood sample is taken — the same routine process as a standard blood test." },
+          { title: "Preparation", desc: "Your blood is spun in a centrifuge to separate and concentrate the platelet-rich plasma from the rest of the sample." },
+          { title: "Application", desc: "The concentrated PRP is precisely applied or injected into the treatment area, activating your body's own repair response." },
         ]}
       />
 

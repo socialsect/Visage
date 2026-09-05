@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
-import InteractiveStepsList from "@/components/InteractiveStepsList";
+import InteractiveProcess from "@/components/InteractiveProcess";
 
 export const metadata: Metadata = {
   title: "Dermal Fillers Dubai | Facial Contouring at Visage Polyclinic",
@@ -189,13 +189,13 @@ export default function FillersPage() {
       />
 
       {/* 6. "What to Expect" Section */}
-      <InteractiveStepsList 
+      <InteractiveProcess 
         title="What to Expect"
         className="py-20 sm:py-28"
         steps={[
-          { num: "1", title: "Consultation", body: "We discuss your goals, walk through the right options for your face, and build a plan you actually understand before booking treatment." },
-          { num: "2", title: "Treatment", body: "Precise filler placement using fine needles or cannulas. Timing varies depending on the area and product used." },
-          { num: "3", title: "Results", body: "Volume is visible immediately, though some initial swelling is normal and typically settles within a few days." },
+          { title: "Consultation", desc: "We discuss your goals, walk through the right options for your face, and build a plan you actually understand before booking treatment." },
+          { title: "Treatment", desc: "Precise filler placement using fine needles or cannulas. Timing varies depending on the area and product used." },
+          { title: "Results", desc: "Volume is visible immediately, though some initial swelling is normal and typically settles within a few days." },
         ]}
       />
 

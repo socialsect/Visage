@@ -9,11 +9,12 @@ interface InteractiveProcessProps {
   title: string;
   subtitle?: string;
   steps: Step[];
+  className?: string;
 }
 
-export default function InteractiveProcess({ title, subtitle, steps }: InteractiveProcessProps) {
+export default function InteractiveProcess({ title, subtitle, steps, className = "bg-surface py-20 sm:py-28" }: InteractiveProcessProps) {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className={className}>
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">

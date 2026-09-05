@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import FeatureGrid from "@/components/FeatureGrid";
-import InteractiveStepsList from "@/components/InteractiveStepsList";
+import InteractiveProcess from "@/components/InteractiveProcess";
 
 export const metadata: Metadata = {
   title: "Skin Rejuvenation Dubai | Chemical Peels, Microneedling",
@@ -87,12 +87,13 @@ export default function SkinRejuvenationPage() {
       />
 
       {/* 3. What to Expect */}
-      <InteractiveStepsList 
+      <InteractiveProcess 
         title="What to Expect"
+        className="bg-surface-alt py-20 sm:py-28"
         steps={[
-          { num: "1", title: "Consultation", body: "We look at your skin concerns directly and build a plan around them — not a generic package applied to everyone." },
-          { num: "2", title: "Treatment", body: "Each procedure is carried out with clinical precision, matched to the treatment type and your skin's sensitivity." },
-          { num: "3", title: "Results", body: "Improvement builds gradually as your skin responds over the following weeks — this is a renewal process, not an overnight fix." },
+          { title: "Consultation", desc: "We look at your skin concerns directly and build a plan around them — not a generic package applied to everyone." },
+          { title: "Treatment", desc: "Each procedure is carried out with clinical precision, matched to the treatment type and your skin's sensitivity." },
+          { title: "Results", desc: "Improvement builds gradually as your skin responds over the following weeks — this is a renewal process, not an overnight fix." },
         ]}
       />
 
