@@ -4,6 +4,7 @@ import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { MapEmbed } from "@/components/MapEmbed";
 import { AskQuestionSection } from "@/components/AskQuestionSection";
 import { MedicalServicesList } from "@/components/MedicalServicesList";
+import InteractiveProcess from "@/components/InteractiveProcess";
 
 const featuredTreatments = [
   { title: "Botox", description: "Non-surgical wrinkle reduction and muscle relaxation. Treatments tailored to individual anatomy and goals.", href: "/botox-dubai", linkText: "Botox Dubai", icon: "/moisturizing.svg" },
@@ -12,6 +13,12 @@ const featuredTreatments = [
   { title: "Threads", description: "Non-surgical lift and skin tightening using dissolvable PDO thread technology.", href: "/thread-lift-dubai", linkText: "PDO thread lift Dubai", icon: "/mesotherapy.svg" },
   { title: "Fat Melting", description: "Targeted injectable treatment for localised fat reduction without surgery.", href: "/fat-melting-treatment-dubai", linkText: "fat melting treatment Dubai", icon: "/slim-body.svg" },
   { title: "Regenerative Medicine", description: "PRP, PRF, and biostimulators supporting the skin's natural renewal process.", href: "/prp-treatment-dubai", linkText: "PRP treatment Dubai", icon: "/medication-bottle.svg" },
+];
+
+const howItWorksSteps = [
+  { title: "Book a Consultation", desc: "We start with a conversation, not a checklist — your concerns, goals, and medical history, all discussed in detail." },
+  { title: "Receive Your Treatment Plan", desc: "Dr. Musa reviews your case and recommends the right approach for your specific situation, no guesswork involved." },
+  { title: "Start Treatment", desc: "Your care begins at our Business Bay clinic, with ongoing support at every stage of the process." }
 ];
 
 export default function HomePage() {
@@ -304,64 +311,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── How It Works ─── */}
-      <section className="bg-surface py-20 sm:py-28">
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-          {/* Header */}
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="h-px w-8 bg-warm-300"></span>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
-                Your Path
-              </p>
-              <span className="h-px w-8 bg-warm-300"></span>
-            </div>
-            <h2 className="relative inline-block text-[clamp(1.75rem,3.5vw,2.75rem)] font-semibold leading-[1.12] tracking-tight text-ink">
-              How It Works
-            </h2>
-          </div>
-
-          {/* Steps */}
-          <div className="relative mt-24">
-            {/* Desktop connecting line */}
-            <div className="absolute left-[15%] top-8 hidden w-[70%] border-t border-warm-200 md:block"></div>
-            
-            <div className="grid gap-16 md:grid-cols-3 md:gap-8">
-              {/* Step 1 */}
-              <div className="relative flex flex-col items-center text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="text-lg text-ink">1</span>
-                </div>
-                <h3 className="mt-8 text-xl font-semibold text-ink">Book a Consultation</h3>
-                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
-                  We start with a conversation, not a checklist — your concerns, goals, and medical history, all discussed in detail.
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="relative flex flex-col items-center text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="text-lg text-ink">2</span>
-                </div>
-                <h3 className="mt-8 text-xl font-semibold text-ink">Receive Your Treatment Plan</h3>
-                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
-                  Dr. Musa reviews your case and recommends the right approach for your specific situation, no guesswork involved.
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="relative flex flex-col items-center text-center">
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-warm-200 bg-surface shadow-sm">
-                  <span className="text-lg text-ink">3</span>
-                </div>
-                <h3 className="mt-8 text-xl font-semibold text-ink">Start Treatment</h3>
-                <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-warm-600">
-                  Your care begins at our Business Bay clinic, with ongoing support at every stage of the process.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <InteractiveProcess 
+        title="How It Works" 
+        subtitle="Your Path" 
+        steps={howItWorksSteps} 
+      />
 
       <div className="visage-divider mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12" />
 
