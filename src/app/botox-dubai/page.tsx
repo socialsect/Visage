@@ -97,17 +97,19 @@ export default function BotoxPage() {
 
       {/* 2. Trust Bar */}
       <section className="border-y border-warm-300 py-10 sm:py-12">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-3 gap-px bg-warm-300 px-5 sm:px-8 lg:px-12">
-          {[
-            { label: "No Downtime", sub: "Back to your day immediately after treatment" },
-            { label: "3–6 Months", sub: "Typical duration of results" },
-            { label: "Non-Surgical", sub: "A quick injectable procedure, no incisions" },
-          ].map((f) => (
-            <div key={f.label} className="bg-surface p-6 text-center">
-              <p className="text-xl font-semibold text-ink">{f.label}</p>
-              <p className="mt-1 text-[12px] text-warm-500">{f.sub}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-3 gap-px bg-warm-300">
+            {[
+              { label: "No Downtime", sub: "Back to your day immediately after treatment" },
+              { label: "3–6 Months", sub: "Typical duration of results" },
+              { label: "Non-Surgical", sub: "A quick injectable procedure, no incisions" },
+            ].map((f) => (
+              <div key={f.label} className="bg-surface p-6 text-center">
+                <p className="text-xl font-semibold text-ink">{f.label}</p>
+                <p className="mt-1 text-[12px] text-warm-500">{f.sub}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

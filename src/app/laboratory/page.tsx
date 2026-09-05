@@ -72,18 +72,20 @@ export default function LaboratoryPage() {
       </section>
 
       <section className="border-t border-warm-300 py-10 sm:py-12">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-px bg-warm-300 sm:grid-cols-4 px-5 sm:px-8 lg:px-12">
-          {[
-            { label: "Tests Available", value: "250+" },
-            { label: "Departments", value: "8" },
-            { label: "Typical Turnaround", value: "1–5 Days" },
-            { label: "Processed In-House", value: "All Tests" },
-          ].map((f) => (
-            <div key={f.label} className="bg-surface p-6 text-center">
-              <p className="text-2xl font-semibold text-ink">{f.value}</p>
-              <p className="mt-1 text-[12px] text-warm-500">{f.label}</p>
-            </div>
-          ))}
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-2 gap-px bg-warm-300 sm:grid-cols-4">
+            {[
+              { label: "Tests Available", value: "250+" },
+              { label: "Departments", value: "8" },
+              { label: "Typical Turnaround", value: "1–5 Days" },
+              { label: "Processed In-House", value: "All Tests" },
+            ].map((f) => (
+              <div key={f.label} className="bg-surface p-6 text-center">
+                <p className="text-2xl font-semibold text-ink">{f.value}</p>
+                <p className="mt-1 text-[12px] text-warm-500">{f.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
