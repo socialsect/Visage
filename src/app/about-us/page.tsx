@@ -176,11 +176,27 @@ export default function AboutPage() {
                 </svg>
               </Link>
             </div>
-            <div className="lg:col-span-6">
-              <div className="grid grid-cols-2 gap-px bg-warm-300">
+            <div className="lg:col-span-6 relative">
+              {/* Subtle background glow for the grid */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full bg-brand-100/30 blur-[80px] pointer-events-none" />
+              
+              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {["Aesthetic Medicine", "General Practice", "Male Health", "Adolescent Health", "Chronic Disease", "Minor Surgery"].map((s) => (
-                  <div key={s} className="bg-surface p-5 text-[13px] font-medium text-warm-700">
-                    {s}
+                  <div 
+                    key={s} 
+                    className="group relative flex items-center gap-4 rounded-2xl bg-surface p-4 border border-warm-200 transition-all duration-300 hover:shadow-xl hover:border-brand-300 hover:-translate-y-1 cursor-default"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-2xl" />
+                    
+                    <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-alt border border-warm-200 text-brand-400 transition-all duration-300 group-hover:bg-brand-500 group-hover:text-white group-hover:border-brand-500 group-hover:shadow-md group-hover:scale-110">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </div>
+                    
+                    <span className="relative z-10 text-[14px] font-medium text-ink transition-colors duration-300 group-hover:text-brand-900">
+                      {s}
+                    </span>
                   </div>
                 ))}
               </div>
