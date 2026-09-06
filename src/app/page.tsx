@@ -81,7 +81,7 @@ export default function HomePage() {
               Established in Business Bay, Visage Polyclinic brings together aesthetic medicine and general medical services in the heart of Dubai. Our approach is simple: professional, evidence-based care, delivered with clarity and respect for every individual.
             </p>
             <p className="mt-4 text-[15px] leading-[1.75] text-warm-600">
-              As a medical aesthetic clinic, we don't push treatments — we explain them. You'll always know what a procedure involves, what results to expect, and whether it's actually right for you before you book it in.
+              As a medical aesthetic clinic, we don't push treatments — we explain them. You'll always know what a procedure involves, what results to expect, and whether it's actually right for you.
             </p>
           </div>
         </div>
