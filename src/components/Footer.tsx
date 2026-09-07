@@ -79,6 +79,34 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Accepted Insurance */}
+      <div className="border-b border-white/10">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="py-8">
+            <p className="text-center text-[11px] font-medium uppercase tracking-[0.2em] text-white/40 mb-6">
+              Accepted Insurance
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+              <div className="flex items-center gap-3">
+                <div className="relative h-10 w-20 sm:h-12 sm:w-24 overflow-hidden">
+                  <Image src="/insurance/aafiya-logo-1e.png" alt="Aafiya Insurance" fill sizes="96px" className="object-contain" />
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="relative h-10 w-20 sm:h-12 sm:w-24 overflow-hidden">
+                  <Image src="/insurance/inayah.png" alt="Inayah Insurance" fill sizes="96px" className="object-contain" />
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="relative h-10 w-20 sm:h-12 sm:w-24 overflow-hidden">
+                  <Image src="/insurance/fmc.png" alt="FMC Insurance" fill sizes="96px" className="object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main footer */}
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
