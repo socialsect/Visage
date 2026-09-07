@@ -22,6 +22,7 @@ const navLinks = [
       { href: "/minor-aesthetic-procedures-dubai", label: "Minor Procedures" },
     ],
   },
+  { href: "/offers", label: "Offers" },
   { href: "/aesthetic-doctor-dubai", label: "Doctor" },
   { href: "/laboratory", label: "Laboratory" },
   { href: "/publications", label: "Blog" },

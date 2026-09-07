@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/fat-melting-treatment-dubai",
     "/skin-boosters-dubai",
     "/minor-aesthetic-procedures-dubai",
+    "/offers",
     "/laboratory",
     "/aesthetic-doctor-dubai",
     "/publications",

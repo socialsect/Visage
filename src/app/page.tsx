@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import { OffersCarousel } from "@/components/OffersCarousel";
 import { MapEmbed } from "@/components/MapEmbed";
 import { AskQuestionSection } from "@/components/AskQuestionSection";
 import { MedicalServicesList } from "@/components/MedicalServicesList";
@@ -136,6 +137,33 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── Special Offers ─── */}
+      <section className="bg-surface-alt py-20 sm:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+          <div className="mb-14">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500">
+              Special Offers
+            </p>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-semibold leading-[1.15] tracking-tight text-ink">
+                This Month&apos;s Featured<br className="hidden sm:block" /> Prices
+              </h2>
+              <Link
+                href="/offers"
+                className="inline-flex items-center text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700"
+              >
+                View all offers
+                <svg className="ml-1.5 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          <OffersCarousel />
         </div>
       </section>
 
