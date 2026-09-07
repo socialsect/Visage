@@ -102,6 +102,11 @@ export function Footer() {
                   <Image src="/insurance/fmc.png" alt="FMC Insurance" fill sizes="96px" className="object-contain" />
                 </div>
               </div>
+              <div className="flex items-center">
+                <span className="rounded-full border border-dashed border-white/20 px-4 py-2 text-[11px] font-medium text-white/30">
+                  More coming soon
+                </span>
+              </div>
             </div>
           </div>
         </div>
