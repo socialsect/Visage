@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://visagepolyclinicdubai.com"),
   title: {
     default: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
-    template: "%s | Visage Polyclinic",
   },
   description:
     "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",

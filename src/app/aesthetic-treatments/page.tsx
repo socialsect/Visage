@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Aesthetic Treatments & Medical Services Dubai",
+  title: "Aesthetic Treatments & Medical Services Dubai | Visage",
   description:
     "Explore aesthetic and medical treatments in Dubai — Botox, fillers, skin rejuvenation, general practice and minor surgery, all under one roof at Visage.",
 };

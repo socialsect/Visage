@@ -3,18 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Visage Polyclinic | Aesthetic & Medical Care Dubai",
+  title: "About Visage Polyclinic | Business Bay, Dubai",
   description:
-    "Visage Polyclinic is a multi-speciality clinic in Business Bay, Dubai, offering aesthetic and general medical care under one roof. Learn our story.",
-  openGraph: {
-    title: "About Visage Polyclinic | Aesthetic & Medical Care Dubai",
-    description: "Visage Polyclinic is a multi-speciality clinic in Business Bay, Dubai, offering aesthetic and general medical care under one roof. Learn our story.",
-    images: [{ url: "https://visagepolyclinicdubai.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: ["https://visagepolyclinicdubai.com/api/og?title=About%20Visage%20Polyclinic&subtitle=Established%20September%202024%20%7C%20Business%20Bay%2C%20Dubai"],
-  },
+    "Visage Polyclinic is a multi-speciality medical and aesthetic clinic in Business Bay, Dubai. Learn about our philosophy and approach to patient care.",
 };
 
 export default function AboutPage() {

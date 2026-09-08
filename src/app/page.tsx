@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Aesthetic Clinic Dubai | Visage Polyclinic, Business Bay",
+  description:
+    "Visage Polyclinic is an aesthetic clinic in Dubai's Business Bay offering Botox, dermal fillers, skin rejuvenation and general medical care. Book today.",
+};
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { OffersCarousel } from "@/components/OffersCarousel";
 import { MapEmbed } from "@/components/MapEmbed";

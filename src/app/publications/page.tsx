@@ -6,9 +6,9 @@ import { sanity } from "@/lib/sanity";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Health Insights & Blog",
+  title: "Aesthetic Medicine Publications | Visage Polyclinic Dubai",
   description:
-    "Read the latest health insights, medical advice, and aesthetic treatment guides from Visage Polyclinic, Business Bay, Dubai.",
+    "Research, articles and publications from Visage Polyclinic's aesthetic and general medical team in Dubai. Evidence-based insight behind our treatments.",
 };
 
 const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {

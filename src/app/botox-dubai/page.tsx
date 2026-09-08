@@ -8,7 +8,7 @@ import InteractiveProcess from "@/components/InteractiveProcess";
 export const metadata: Metadata = {
   title: "Botox Dubai | Anti-Wrinkle Treatment at Visage Polyclinic",
   description:
-    "Botox in Dubai for forehead lines, frown lines and crow's feet. Natural-looking results, no downtime. Book a Botox consultation at Visage Polyclinic.",
+    "Botox in Dubai for forehead lines, frown lines and crow\u2019s feet. Natural-looking results, no downtime. Book a Botox consultation at Visage Polyclinic.",
 };
 
 const areas = [
