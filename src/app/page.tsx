@@ -225,7 +225,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="order-2 lg:order-1 lg:col-span-7">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[5px] bg-warm-200 sm:aspect-[16/10]">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[5px] bg-warm-200 sm:aspect-[4/5]">
                 <Image
                   src="/dr-musa.jpg"
                   alt="Dr. Musa - Dermal filler treatments at Visage Polyclinic"

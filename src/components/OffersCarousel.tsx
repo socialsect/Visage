@@ -95,7 +95,7 @@ export function OffersCarousel() {
   return (
     <div className="relative">
       {/* Navigation Buttons */}
-      <div className="absolute right-0 top-[-70px] hidden sm:flex gap-3">
+      <div className="flex justify-end gap-3 mb-4 hidden sm:flex">
         <button
           onClick={() => scroll("left")}
           className="flex h-11 w-11 items-center justify-center rounded-full border border-warm-300 bg-surface text-ink transition-colors hover:bg-warm-200 active:scale-95"
